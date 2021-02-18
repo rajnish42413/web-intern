@@ -13,8 +13,10 @@
                     WeIntern Summer Olympiad will be India’s 1st Summer Olympiad for classes 2nd to 11th. The olympiad will be
                 </h2>
                 <div>
-                 <a class="btn-get-started" href="#" data-aos="fade-up" data-aos-delay="500">Sign Up Now</a>
-               </div>
+                    <a class="btn-get-started" data-aos="fade-up" data-aos-delay="500" href="#">
+                        Sign Up Now
+                    </a>
+                </div>
             </div>
             <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
                 <img alt="" class="img-fluid" src="img/home/banner-img-study.svg">
@@ -37,7 +39,6 @@
                     WeIntern Summer Olympiad will be India’s 1st Summer Olympiad for classes 2nd to 11th. The olympiad will be based on previous years curriculum that the student would have completed in their 2021 curriculum. WeIntern Summer Olympiad will focus on assessing students practical & concept application, thinking ability & reasoning skills.
                 </p>
             </header>
-
             <div class="row justify-content-center">
                 <div class="col-md-10 about-list">
                     <ul>
@@ -74,7 +75,6 @@
                     </ul>
                 </div>
             </div>
-
             <div class="row mt-5 justify-content-center about-services">
                 <div class="col-lg-4">
                     <div class="box" data-aos="fade-up" data-aos-delay="200">
@@ -150,20 +150,22 @@
                             <h3>
                                 Marking Scheme & Ranking Criteria
                             </h3>
-                            <div class="divider-100"></div>
+                            <div class="divider-100">
+                            </div>
                             <p>
                                 Guidelines for all olympiad takers to read before starting the exam.
                             </p>
-                            <a href="#">Read More ></a>
+                            <a href="#">
+                                Read More >
+                            </a>
+                        </img>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-@include('includes.qa')
-
-    <section class="help">
+    @include('includes.qa')
+    <section class="pt-0 always-here">
         <div class="container">
             <header class="section-header">
                 <h2>
@@ -175,27 +177,34 @@
                     </br>
                 </h2>
             </header>
+        </div>
+    </section>
+    <div class="help pt-0">
+        <div class="container">
             <div class="row mt-5">
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <img src="img/home/banner-3.png">
                     </img>
                 </div>
-                <div class="col-md-7">
-                    <h2>
-                        We are bunch of people who take mental
-                        <br>
-                            Health very seriously.
-                        </br>
-                    </h2>
-                    <p>
-                        Wellbe is the first intelligent marketplace for mental health, born out of the Zinc incubator. We are on a mission to improve mental wellbeing in the workplace with a disruptive, holistic and evidence-based approach.
-                    </p>
-                    <p>
-                        We focus on prevention and behaviour change, rather than the traditional reactive approach that contributes to the rising personal and financial cost of mental ill health.
-                    </p>
+                <div class="col-md-6 content">
+                    <div>
+                        <h2>
+                            We are bunch of people who take mental
+                            <br>
+                                Health very seriously.
+                            </br>
+                        </h2>
+                        <p>
+                            Wellbe is the first intelligent marketplace for mental health, born out of the Zinc incubator. We are on a mission to improve mental wellbeing in the workplace with a disruptive, holistic and evidence-based approach.
+                        </p>
+                        <p>
+                            We focus on prevention and behaviour change, rather than the traditional reactive approach that contributes to the rising personal and financial cost of mental ill health.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    @include('includes.testimonials')
 </main>
 @stop

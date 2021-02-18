@@ -9,65 +9,122 @@
             </h2>
         </header>
         <div class="row mt-2">
-          <div class="col-6">
-            <div class="card">
-                <div class="card-header" id="headingOne">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header" id="headingFour">
                         <button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link" data-target="#collapseOne" data-toggle="collapse">
-                            +  Collapsible Group Item #1
+                            - How to sign up for the program
                         </button>
-                </div>
-                <div aria-labelledby="headingOne" class="collapse show" data-parent="#accordion" id="collapseOne">
-                    <div class="card-body">
-                        Lorem ipsum dolor sitor orem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitor
+                    </div>
+                    <div aria-labelledby="headingOne" class="collapse show" data-parent="#accordion" id="collapseOne">
+                        <div class="card-body">
+                            Lorem ipsum dolor sitor orem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitor.
+                        </div>
                     </div>
                 </div>
-            </div>
-          </div>
-            <div class="col-6">
-            <div class="card">
-                <div class="card-header" id="headingTwo">
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
                         <button aria-controls="collapseTwo" aria-expanded="false" class="btn btn-link collapsed" data-target="#collapseTwo" data-toggle="collapse">
-                            +  Collapsible Group Item #2
+                            + How this program works?
                         </button>
-                </div>
-                <div aria-labelledby="headingTwo" class="collapse" data-parent="#accordion" id="collapseTwo">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                    <div aria-labelledby="headingTwo" class="collapse" data-parent="#accordion" id="collapseTwo">
+                        <div class="card-body">
+                            Lorem ipsum dolor sitor orem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitor.
+                        </div>
                     </div>
                 </div>
-            </div>
-          </div>
-            <div class="col-6">
-            <div class="card">
-                <div class="card-header" id="headingThree">
+                <div class="card">
+                    <div class="card-header" id="headingThree">
                         <button aria-controls="collapseThree" aria-expanded="false" class="btn btn-link collapsed" data-target="#collapseThree" data-toggle="collapse">
-                            +  Collapsible Group Item #3
+                            + How this program works?
                         </button>
-                </div>
-                <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion" id="collapseThree">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                    <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion" id="collapseThree">
+                        <div class="card-body">
+                            Lorem ipsum dolor sitor orem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitor.
+                        </div>
                     </div>
                 </div>
             </div>
-          </div>
-        </div>
-
-        <div class="row sign-up-box">
-          <div class="col-md-5 p-0">
-            <img src="img/home/banner-2.png">
-          </div>
-          <div class="col-md-7 sign-buttons">
-            <div class="row pl-4 ">
-               <h2>Sign Up <br> For The Course</h2>
-               <div class="w-100">
-                <button class="btn btn-primary">Sign Up as Student</button>
-                <button class="btn btn-primary ml-2">Sign Up as School</button>
-               </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <button aria-controls="collapseFour" aria-expanded="true" class="btn btn-link" data-target="#collapseFour" data-toggle="collapse">
+                            - How to sign up for the program
+                        </button>
+                    </div>
+                    <div aria-labelledby="headingFour" class="collapse" data-parent="#accordion" id="collapseFour">
+                        <div class="card-body">
+                            Lorem ipsum dolor sitor orem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitor.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                        <button aria-controls="collapseTwo" aria-expanded="false" class="btn btn-link collapsed" data-target="#collapseFive" data-toggle="collapse">
+                            + How this program works?
+                        </button>
+                    </div>
+                    <div aria-labelledby="headingFive" class="collapse" data-parent="#accordion" id="collapseFive">
+                        <div class="card-body">
+                            Lorem ipsum dolor sitor orem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitor.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingSix">
+                        <button aria-controls="collapseSix" aria-expanded="false" class="btn btn-link collapsed" data-target="#collapseSix" data-toggle="collapse">
+                            + How this program works?
+                        </button>
+                    </div>
+                    <div aria-labelledby="headingSix" class="collapse" data-parent="#accordion" id="collapseSix">
+                        <div class="card-body">
+                            Lorem ipsum dolor sitor orem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitor.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingSeven">
+                        <button aria-controls="collapseSeven" aria-expanded="false" class="btn btn-link collapsed" data-target="#collapseSeven" data-toggle="collapse">
+                            + How this program works?
+                        </button>
+                    </div>
+                    <div aria-labelledby="headingSeven" class="collapse" data-parent="#accordion" id="collapseSeven">
+                        <div class="card-body">
+                            Lorem ipsum dolor sitor orem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitororem ipsum dolor sitor.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
     </div>
 </section>
-
-   
+<section id="sign-up">
+    <div class="container">
+        <div class="row sign-up-box">
+            <div class="col-md-5 p-0">
+                <img src="img/home/banner-2.png">
+                </img>
+            </div>
+            <div class="col-md-7 sign-buttons">
+                <div class="row pl-5">
+                    <h2>
+                        Sign Up
+                        <br>
+                            For The Course
+                        </br>
+                    </h2>
+                    <div class="w-100 btns">
+                        <a class="btn btn-primary">
+                            Sign Up as Student
+                        </a>
+                        <a class="btn btn-primary">
+                            Sign Up as School
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
