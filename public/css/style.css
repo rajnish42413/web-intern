@@ -496,16 +496,28 @@ section {
   text-align: right;
 }
 
-@media (min-width: 1024px) {
+.hero-other{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/home/bg-other.svg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+
+/*@media (min-width: 1024px) {
   .hero {
     background-attachment: fixed;
   }
-}
+}*/
 
 @media (max-width: 991px) {
   .hero {
     height: auto;
     padding: 120px 0 60px 0;
+  }
+  .hero-other{
+   padding: 120px 0 160px 0;
   }
   .hero .hero-img {
     text-align: center;
@@ -530,6 +542,67 @@ section {
   .hero .hero-img img {
     width: 100%;
   }
+}
+.bg-gray{
+  background-color: #f7f7f7;
+}
+
+.heading-3{
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.21;
+  text-align: left;
+  color: #000;
+}
+.heading-2{
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #2a2a2a;
+}
+
+.paragraph-3{
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: 1.21;
+  color: #808080;
+}
+
+.paragraph-2{
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 1.21;
+  color: #808080;
+}
+
+.text-theme{
+  color: var(--primary-color);
+}
+
+.register-form{
+  border-radius: 12px;
+  box-shadow: -2px 11px 23px 0 rgba(0, 0, 0, 0.13);
+  border: solid 1px #e3e3e3;
+  background-color: #ffffff;
+  padding: 40px 39px 51px 40px;
+   position: relative;
+  bottom: 75vh;
+}
+@media (max-width: 768px) {
+  .register-form{
+    position: inherit;
+    bottom: 0;
+    margin:4rem 0;
+  }
+  .heading-3, .heading-2{
+    font-size: 1.1em;
+  }
+  .paragraph-2 ,.paragraph-3{
+    font-size: 1em;
+  }
+}
+
+.text-large{
+  font-size: 1.8em;
 }
 
 .about-list{
@@ -711,6 +784,11 @@ section {
   border-radius: 4px;
   background-color: var(--primary-color);
   border:none;
+  font-size: 22px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.23;
 }
 
 .btn-primary:hover {
@@ -824,9 +902,6 @@ section {
   background-color: var(--primary-color);
 }
 
-.testimonials .swiper-slide {
-  opacity: .3;
-}
 
 @media (max-width: 1199px) {
   .testimonials .swiper-slide-active {
@@ -1849,4 +1924,157 @@ section {
   text-align: center;
   font-size: 13px;
   color: var(--primary-color);
+}
+
+
+.star-point {
+  display: flex;
+  flex-direction: row;
+  margin: 0.3rem 0;
+}
+
+.star-point i{
+  font-size: 20px;
+  display: inline-block;
+}
+
+.star-point p{
+  width: calc(100% -50px);
+}
+
+
+/*form reset*/
+.form-control{
+  border:none;
+  border-bottom: solid 1px #e3e3e3;
+  background-color: #ffffff;
+ border-radius: 0;
+ font-size: 22px;
+ font-weight: 500;
+ font-stretch: normal;
+ font-style: normal;
+ line-height: 1.23;
+ letter-spacing: normal;
+ text-align: left;
+ color: #5d5d5d;
+ padding: 10px 0;
+}
+
+.underline{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.form-group{
+ margin: 1rem 0;
+}
+
+.register-form textarea{
+  border:1px solid #e3e3e3 !important;
+  padding: 10px;
+}
+
+.form-control:focus {
+   border-bottom: solid 1px var(--primary-color);
+  box-shadow: none ;
+}
+.form-check-label{
+  margin:5px 0;
+}
+
+.ranking{
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  justify-content: space-between;
+  margin:0 auto;
+}
+.ranking h2{
+  display: flex;
+  flex-direction: row;
+  width: 45%;
+}
+.ranking h2:last-child{
+  flex-direction: row;
+  width: 50%;
+}
+
+.ranking h2 .year{
+ font-size: 50px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  margin-right: 15px;
+}
+
+.ranking .h-border{
+  width: 0;
+  height: 54px;
+  margin: 5.5px 0 4.5px;
+  border: solid 2px #ffffff;
+  position: relative;
+  top: 20px;
+}
+
+label, .label{
+ font-size: 22px;
+ font-weight: 500;
+ font-stretch: normal;
+ font-style: normal;
+ line-height: 1.23;
+ letter-spacing: normal;
+ text-align: left;
+ color: #5d5d5d;
+}
+
+.ranking-result .card{
+  border-radius: 8px;
+   box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.1);
+   background-color: #ffffff;
+   height: 175px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: none;
+   margin:1rem 0;
+}
+
+.ranking-result .card h1{
+  font-size: 50px;
+   font-weight: bold;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: 1.2;
+   letter-spacing: normal;
+   text-align: center;
+   color: #3eaa6d;
+}
+.ranking-result .card p{
+   font-size: 22px;
+   font-weight: 500;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: 1.23;
+   letter-spacing: normal;
+   text-align: left;
+   color: #5d5d5d;
+}
+
+@media (max-width: 768px) {
+  .form-control , label, .label{
+    font-size: 1em;
+  }
+  .ranking{
+    flex-direction: column;
+  }.ranking .h-border{
+    height: 0;
+    width: 100%;
+  }
+  .ranking h2{
+    width: 100%;
+  }
 }

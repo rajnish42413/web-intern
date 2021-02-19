@@ -11,7 +11,7 @@
                 </br>
             </h2>
         </header>
-        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonials-slider swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="testimonial-item">
