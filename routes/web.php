@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('links');
+});
+
+Route::get('/home', function () {
     return view('home');
 });
 
@@ -24,3 +28,12 @@ Route::get('/register', function () {
 Route::get('/ranking-criteria', function () {
     return view('ranking-criteria');
 });
+
+Route::get('/syllabus', function () {
+    return view('syllabus');
+});
+
+Route::get('/exam-information', function () {
+    return view('exam-information');
+});
+

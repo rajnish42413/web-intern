@@ -37,7 +37,8 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="vendor/aos/aos.js"></script>
   <script src="vendor/php-email-form/validate.js"></script>
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
@@ -46,6 +47,8 @@
   <script src="vendor/glightbox/js/glightbox.min.js"></script>
 
   <script src="js/main.js"></script>
+
+  @yield('script')
 
 </body>
 
