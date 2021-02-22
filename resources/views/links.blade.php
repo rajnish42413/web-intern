@@ -23,8 +23,10 @@
                 <li class="p-2"><a href="/home">Home Landing Page</a></li>
                 <li class="p-2"><a href="/register">Register</a></li>
                 <li class="p-2"><a href="/ranking-criteria">Ranking- Criteria</a></li>
-                <li class="p-2"><a href="/syllabus">syllabus</a></li>
+                <li class="p-2"><a href="/syllabus">Syllabus</a></li>
                 <li class="p-2"><a href="/exam-information">Exam Information</a></li>
+                <li class="p-2"><a href="/school-register">School Register</a></li>
+                <li class="p-2"><a href="/individual-register">Individual Register</a></li>
               </ol>
             </div>
           </div>

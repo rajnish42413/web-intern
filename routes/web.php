@@ -36,4 +36,10 @@ Route::get('/syllabus', function () {
 Route::get('/exam-information', function () {
     return view('exam-information');
 });
+Route::get('/school-register', function () {
+    return view('school-register');
+});
+Route::get('/individual-register', function () {
+    return view('individual-register');
+});
 
