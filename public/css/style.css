@@ -1100,12 +1100,17 @@ section {
     color: #5d5d5d;
     padding: 10px 0;
 }
+
+select.form-control{
+  padding: 0;
+}
+
 .underline {
     text-decoration: underline;
     text-decoration-thickness: 1px;
 }
 .form-group {
-    margin: 1rem 0;
+    margin: 1.2rem 0;
 }
 .register-form textarea, .school-register-form textarea {
     border: 1px solid #e3e3e3 !important;
@@ -1352,6 +1357,9 @@ label, .label {
 .individual-setps li:last-child {
     border-top: none;
     border-bottom: none;
+}
+.fs-18{
+    font-size: 18px !important;
 }
 @media (max-width: 992px) {
     .syllabus-card .card {

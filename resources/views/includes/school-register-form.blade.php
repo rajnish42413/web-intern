@@ -94,18 +94,15 @@
             </div>
             <div class="form-group">
                 <input class="form-control" placeholder="Email ID" type="email">
-                </input>
             </div>
             <h3 class="text-theme heading-3 mt-5">
                 Principal Details
             </h3>
             <div class="form-group">
                 <input class="form-control" placeholder="Principal Name" type="text">
-                </input>
             </div>
             <div class="form-group">
                 <input class="form-control" placeholder="Mobile Number" type="tel">
-                </input>
             </div>
             <div class="form-group">
                 <label class="mr-2">

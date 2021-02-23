@@ -43,3 +43,9 @@ Route::get('/individual-register', function () {
     return view('individual-register');
 });
 
+Route::get('/user', function () {
+    return view('user/index');
+});
+
+
+

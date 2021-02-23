@@ -79,7 +79,6 @@
             <div class="col-6">
                 <div class="form-group">
                     <input class="form-control" placeholder="Pincode" type="text">
-                    </input>
                 </div>
             </div>
         </div>
@@ -89,7 +88,6 @@
         </div>
         <div class="form-group">
             <input class="form-control" placeholder="Email ID" type="email">
-            </input>
         </div>
 
 
@@ -101,7 +99,6 @@
         </div>
         <div class="form-group">
             <input class="form-control" placeholder="Mobile Number" type="tel">
-            </input>
         </div>
         <div class="form-group">
           <label class="mr-2">Exam Mode:</label>

@@ -12,11 +12,11 @@
   </head>
   <body>
     <div class="container ">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-md-7">
+      <div class="row">
+        <div class="col-md-6">
           <div class="card my-5">
             <div class="card-header">
-              <h1>Welcome to Webinter</h1>
+              <h1>Webinter - Features pages</h1>
             </div>
             <div class="card-body">
               <ol>
@@ -27,6 +27,19 @@
                 <li class="p-2"><a href="/exam-information">Exam Information</a></li>
                 <li class="p-2"><a href="/school-register">School Register</a></li>
                 <li class="p-2"><a href="/individual-register">Individual Register</a></li>
+                <li class="p-2"><a href="/student-register">Student Register</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+         <div class="col-md-6">
+          <div class="card my-5">
+            <div class="card-header">
+              <h1>Webinter - Logged In Pages</h1>
+            </div>
+            <div class="card-body">
+              <ol>
+                <li class="p-2"><a href="/user">Dashboard</a></li>
               </ol>
             </div>
           </div>
