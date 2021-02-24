@@ -40,6 +40,8 @@
             <div class="card-body">
               <ol>
                 <li class="p-2"><a href="/user">Dashboard</a></li>
+                <li class="p-2"><a href="/user/2">Dashboard 2</a></li>
+                <li class="p-2"><a href="/purchases">My Purchases</a></li>
               </ol>
             </div>
           </div>

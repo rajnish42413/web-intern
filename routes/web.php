@@ -44,7 +44,15 @@ Route::get('/individual-register', function () {
 });
 
 Route::get('/user', function () {
-    return view('user/index');
+    return view('user/dashboard');
+});
+
+Route::get('/user/2', function () {
+    return view('user/dashboard-2');
+});
+
+Route::get('/purchases', function () {
+    return view('user/purchase');
 });
 
 
