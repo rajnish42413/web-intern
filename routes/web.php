@@ -42,6 +42,9 @@ Route::get('/school-register', function () {
 Route::get('/individual-register', function () {
     return view('individual-register');
 });
+Route::get('/student-register', function () {
+    return view('student-register');
+});
 
 Route::get('/user', function () {
     return view('user/dashboard');
@@ -53,6 +56,20 @@ Route::get('/user/2', function () {
 
 Route::get('/purchases', function () {
     return view('user/purchase');
+});
+
+Route::get('/mock-tests', function () {
+    return view('user/mock-tests');
+});
+
+Route::get('/mock-tests-2', function () {
+    return view('user/mock-tests-2');
+});
+Route::get('/olympiad-exam', function () {
+    return view('user/olympiad-exam');
+});
+Route::get('/olympiad-exam-answer', function () {
+    return view('user/olympiad-exam-answer');
 });
 
 

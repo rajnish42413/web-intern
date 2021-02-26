@@ -36,7 +36,7 @@
                     <a href="/user">
                         <i class="fa fa-home">
                         </i>
-                        Home
+                        Home 
                     </a>
                 </li>
                 <li>
@@ -54,28 +54,28 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/purchases">
                         <i class="fa fa-list-ol">
                         </i>
                         My Purchases
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/mock-tests">
                         <i class="fa fa-file-text-o">
                         </i>
                         Mock Tests
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/olympiad-exam">
                         <i class="fa fa-address-card-o">
                         </i>
                         Olympiad Exam
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/olympiad-exam-answer">
                         <i class="fa fa-list-alt">
                         </i>
                         Olympiad Exam Answers

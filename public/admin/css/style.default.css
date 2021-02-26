@@ -13,6 +13,9 @@ ul{
 .text-small {
   font-size: 0.9rem;
 }
+.bg-gray{
+  background-color: #f4f4f4;
+}
 
 .text-xsmall {
   font-size: 0.8rem;
@@ -3301,7 +3304,6 @@ a > code {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 .list-order li{
@@ -3315,8 +3317,70 @@ a > code {
   cursor: pointer;
 }
 
+.list-order.w-100 li{
+  width: 100%;
+}
+
 
 .list-order li:hover, .list-order li:active, .list-order li.active{
   background-color: #3eaa6d;
   color: #fff;
 }
+
+.list-exam{
+  padding: 2rem;
+  border-radius: 4px;
+  background-color: #fff;
+  margin :1rem 0;
+  border:1px solid #bbc6d6;
+}
+
+.list-exam.active{
+  background-color: #3eaa6d;
+}
+
+.list-exam h3{
+  color: #000;
+}
+
+.list-exam.active h3{
+  color: #fff;
+}
+
+.badge-info-right{
+  position: absolute;
+  right: 15px;
+  top: 42px;
+  padding: 8px 27px 7.3px 14.9px;
+  background-color: #3eaa6d;
+  color: #fff;
+} 
+
+.badge-info-right.white{
+  background-color: #ffffff;
+  color: #000000;
+} 
+
+.badge-info-right:before{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    border-left: 19.5px solid #3eaa6d;
+    border-right: 19.5px solid #3eaa6d;
+    border-bottom: 19.5px solid transparent;
+    transform: rotate(90deg);
+    left: -28px;
+    top: 10px;
+  }
+
+  .badge-info-right.white:before{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    border-left: 19.5px solid #ffffff;
+    border-right: 19.5px solid #ffffff;
+    border-bottom: 19.5px solid transparent;
+    transform: rotate(90deg);
+    left: -28px;
+    top: 10px;
+  }

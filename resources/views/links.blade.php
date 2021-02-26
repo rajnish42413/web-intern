@@ -42,6 +42,9 @@
                 <li class="p-2"><a href="/user">Dashboard</a></li>
                 <li class="p-2"><a href="/user/2">Dashboard 2</a></li>
                 <li class="p-2"><a href="/purchases">My Purchases</a></li>
+                <li class="p-2"><a href="/mock-tests">Mock Tests</a></li>
+                <li class="p-2"><a href="/olympiad-exam">Olympiad Exam</a></li>
+                <li class="p-2"><a href="/olympiad-exam-answer">Olympiad Exam Answer</a></li>
               </ol>
             </div>
           </div>
