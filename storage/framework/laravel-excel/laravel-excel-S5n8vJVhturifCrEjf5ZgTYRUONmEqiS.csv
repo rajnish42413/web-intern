@@ -1,0 +1,618 @@
+name,class,subject_id
+Number Name,class-2,mathematics
+Number Sense,class-2,mathematics
+Numerals,class-2,mathematics
+Addition,class-2,mathematics
+Substraction,class-2,mathematics
+Length,class-2,mathematics
+Weight,class-2,mathematics
+Money,class-2,mathematics
+Time Geometrical Skill,class-2,mathematics
+Number Name,class-3,mathematics
+Number Sense,class-3,mathematics
+Numerals,class-3,mathematics
+Substraction,class-3,mathematics
+Measurement of Length,class-3,mathematics
+Weight,class-3,mathematics
+Money,class-3,mathematics
+Time and Temperature,class-3,mathematics
+Calendar,class-3,mathematics
+Point,class-3,mathematics
+Line and Plane Figures,class-3,mathematics
+Problems based on Figures,class-3,mathematics
+,,mathematics
+Numerals,class-4,mathematics
+Number Name,Class-4,mathematics
+Number Sense,Class-4,mathematics
+Compuation Operations,Class-4,mathematics
+Addition,class-4,mathematics
+Substraction,Class-4,mathematics
+Multiplication,class-4,mathematics
+Division,class-4,mathematics
+Fractions,class-4,mathematics
+Length,class-4,mathematics
+Weight,class-4,mathematics
+Capacity,class-4,mathematics
+Quantity,class-4,mathematics
+Money,class-4,mathematics
+Time and Temperature,class-4,mathematics
+Calender,class-4,mathematics
+Geometry,class-4,mathematics
+Point,class-4,mathematics
+Problems Based on Figures,class-4,mathematics
+Straight Lines and Curved Lines,class-4,mathematics
+Geometrical Shapes,class-4,mathematics
+,,mathematics
+Numerals,Class-5,mathematics
+Number Name,Class-5,mathematics
+Number Sense,Class-5,mathematics
+Place Value,Class-5,mathematics
+Roman Numerals,Class-5,mathematics
+Computation Operations,Class-5,mathematics
+Addition,Class-5,mathematics
+Substraction,Class-5,mathematics
+Multiplication,Class-5,mathematics
+Division,Class-5,mathematics
+Factors,Class-5,mathematics
+Multiples,Class-5,mathematics
+Fractions Measurements,Class-5,mathematics
+Length,Class-5,mathematics
+Mass,Class-5,mathematics
+Capacity,Class-5,mathematics
+Temperature Meaurements,Class-5,mathematics
+Time,Class-5,mathematics
+Pictorial Representation of Data,Class-5,mathematics
+Measurements,Class-5,mathematics
+Money,Class-5,mathematics
+Geometry,Class-5,mathematics
+Closed and Open Figures,Class-5,mathematics
+Perimeter of Various Shapes,Class-5,mathematics
+,,mathematics
+Numerals,Class-6,mathematics
+Number Name,Class-6,mathematics
+Number Sense,Class-6,mathematics
+Roman Numerals,Class-6,mathematics
+Computation Operations,Class-6,mathematics
+Addition,Class-6,mathematics
+Substraction,Class-6,mathematics
+Multiplication,Class-6,mathematics
+Division,Class-6,mathematics
+Factors,Class-6,mathematics
+Multiples,Class-6,mathematics
+Fractions Measurements,Class-6,mathematics
+Length,Class-6,mathematics
+Mass,Class-6,mathematics
+Capacity,Class-6,mathematics
+Volume,Class-6,mathematics
+Temperature,Class-6,mathematics
+Measurements,Class-6,mathematics
+Money,Class-6,mathematics
+Time,Class-6,mathematics
+Relationship Between Seconds,Class-6,mathematics
+Minutes and Hours,Class-6,mathematics
+Geometry,Class-6,mathematics
+"Perimeter and Area of Rectangle,Square",Class-6,mathematics
+Symmetry and Data Handling,Class-6,mathematics
+Decimals,Class-6,mathematics
+,,mathematics
+Knowing your Numbers,Class-7,mathematics
+Whole Numbers,Class-7,mathematics
+Integers,Class-7,mathematics
+Playing with Numbers,Class-7,mathematics
+Computation Operations,Class-7,mathematics
+Addition,Class-7,mathematics
+Substraction,Class-7,mathematics
+Multiplication,Class-7,mathematics
+Division,Class-7,mathematics
+Length,Class-7,mathematics
+Mass,Class-7,mathematics
+Capacity,Class-7,mathematics
+Volume,Class-7,mathematics
+Temperature,Class-7,mathematics
+Relationship Between Seconds,Class-7,mathematics
+Fractions,Class-7,mathematics
+Decimals,Class-7,mathematics
+Basic Geometrical Ideas,Class-7,mathematics
+Algebra,Class-7,mathematics
+Ratio and Proportion,Class-7,mathematics
+Understanding Elementary Shapes,Class-7,mathematics
+Mensuration,Class-7,mathematics
+Symmetry and Practical Geometry,Class-7,mathematics
+Data Handling,Class-7,mathematics
+,,mathematics
+Number System,Class-8,mathematics
+Integers,Class-8,mathematics
+Rational Numbbers,Class-8,mathematics
+Fractions,Class-8,mathematics
+Decimals,Class-8,mathematics
+Exponents and Powers,Class-8,mathematics
+Comapring Quantities,Class-8,mathematics
+Simple Equations,Class-8,mathematics
+Algebraic Expressions,Class-8,mathematics
+Concept of Percentage,Class-8,mathematics
+Profit and Loss,Class-8,mathematics
+Simple Interest,Class-8,mathematics
+Lines and Angles,Class-8,mathematics
+Triangle and its Properties,Class-8,mathematics
+Congruence of Triangles,Class-8,mathematics
+Mensuration,Class-8,mathematics
+Geomtry and Solid Shapes,Class-8,mathematics
+Symmetry and Practical Geometry,Class-8,mathematics
+Data Handling,Class-8,mathematics
+,,mathematics
+Number System,Class-9,mathematics
+Integers,Class-9,mathematics
+Rational Numbbers,Class-9,mathematics
+Fractions,Class-9,mathematics
+Decimals,Class-9,mathematics
+Exponents and Powers,Class-9,mathematics
+Square and Square Roots,Class-9,mathematics
+Cube and Cube roots,Class-9,mathematics
+Direct and Inverse Proportions,Class-9,mathematics
+Linear Equations in one Variables,Class-9,mathematics
+Factorization,Class-9,mathematics
+Algebraic Expressions and Identities,Class-9,mathematics
+Concept of Percentage,Class-9,mathematics
+Profit and Loss,Class-9,mathematics
+Simple Interest,Class-9,mathematics
+Lines and Angles,Class-9,mathematics
+Triangle and its Properties,Class-9,mathematics
+Congruence of Triangles,Class-9,mathematics
+Visualizing Solid Shapes,Class-9,mathematics
+Understanding Quandrilaterals,Class-9,mathematics
+Mensuration,Class-9,mathematics
+Symmetry and Practical Geometry,Class-9,mathematics
+Data Handling,Class-9,mathematics
+Intro to Graphs,Class-9,mathematics
+Everyday Mathematics,Class-9,mathematics
+,,mathematics
+Square and Square Roots,Class-10,mathematics
+Cube and Cube roots,Class-10,mathematics
+Direct and Inverse Proportions,Class-10,mathematics
+Linear Equations in one Variables,Class-10,mathematics
+Factorization,Class-10,mathematics
+Algebraic Expressions and Identities,Class-10,mathematics
+Intro to Euclids Geometry,Class-10,mathematics
+Lines and Angles,Class-10,mathematics
+Triangle and its Properties,Class-10,mathematics
+Congruence of Triangles,Class-10,mathematics
+Visualizing Solid Shapes,Class-10,mathematics
+Circles,Class-10,mathematics
+Quadilaterals,Class-10,mathematics
+Areas of Parallelogram and Triangles,Class-10,mathematics
+Coordinate Geometry,Class-10,mathematics
+Surface areas and Volumes,Class-10,mathematics
+Statistics and Probability,Class-10,mathematics
+Intro to Graphs,Class-10,mathematics
+Everyday Mathematics,Class-10,mathematics
+,,mathematics
+Number System,Class-11,mathematics
+Real Numbers,Class-11,mathematics
+Polynomials,Class-11,mathematics
+Pair of Linear Equations in two Variables,Class-11,mathematics
+Intro to Euclids Geometry,Class-11,mathematics
+Lines and Angles,Class-11,mathematics
+Triangle and its Properties,Class-11,mathematics
+Congruence of Triangles,Class-11,mathematics
+Visualizing Solid Shapes,Class-11,mathematics
+Circles and Constructions,Class-11,mathematics
+Quadilaterals,Class-11,mathematics
+Areas of Parallelogram and Triangles,Class-11,mathematics
+Areas of circles & surface areas and volume,Class-11,mathematics
+Coordinate Geometry,Class-11,mathematics
+Surface areas and Volumes,Class-11,mathematics
+Statistics and Probability,Class-11,mathematics
+Intro to Trigonometry and its Applications,Class-11,mathematics
+Everyday Mathematics,Class-11,mathematics
+,,
+Living and Non-Loving Things,Class-2,science
+Plants,Class-2,science
+Animals,Class-2,science
+Human Beings and Their Needs,Class-2,science
+Good Habits and Safety Rules,Class-2,science
+Air and Water,Class-2,science
+Weather and The Sky,Class-2,science
+,,science
+Living and Non-living things,Class-3,science
+Plants and Animals,Class-3,science
+Good Habits and Safety Rules,Class-3,science
+"Air, Water and Rocks",Class-3,science
+"Weather, Earth and Universe",Class-3,science
+Human Body,Class-3,science
+Food,Class-3,science
+Housing and Clothing,Class-3,science
+Family and Festivals,Class-3,science
+Occupations,Class-3,science
+Transport and Communication,Class-3,science
+,,science
+Human Body,Class-4,science
+Our Environment,Class-4,science
+"Food, Housing and Clothing",Class-4,science
+Family and Festivals,Class-4,science
+Occupations,Class-4,science
+Good Habits and Safety Rules,Class-4,science
+"Air, Water and Rocks",Class-4,science
+Earth and Universe,Class-4,science
+Plants and Animals,Class-4,science
+Birds,Class-4,science
+Transport and Communication,Class-4,science
+Matter and Materials,Class-4,science
+"Light, Sound and Force",Class-4,science
+,,science
+Plants and Animals,Class-5,science
+Birds,Class-5,science
+"Food, Housing and Clothing",Class-5,science
+Transport and Communication,Class-5,science
+Human Body,Class-5,science
+Earth and Universe,Class-5,science
+Matter and Materials,Class-5,science
+"Light, Sound and Force",Class-5,science
+Our Environment,Class-5,science
+Food and Digestion,Class-5,science
+"Force, Work and Energy",Class-5,science
+,,science
+Plants and Animals,Class-6,science
+"Food, Housing and Clothing",Class-6,science
+Natural Resources and Calamities,Class-6,science
+Matter and Materials,Class-6,science
+"Force, Work and Energy",Class-6,science
+Our Environment,Class-6,science
+Earth and Universe,Class-6,science
+Human Body and Health,Class-6,science
+,,science
+Human Body and Health,Class-7,science
+Natural Resources and Calamities,Class-7,science
+Earth and Universe,Class-7,science
+Food and Its Component,Class-7,science
+Fibre to Fabric,Class-7,science
+Sorting and Separation of Materials,Class-7,science
+Matter and Changes Around Us,Class-7,science
+Living Organisms and Their Surroundings,Class-7,science
+Motion and Measurement of Distancs,Class-7,science
+"Light, Shadows and Reflection",Class-7,science
+Electricity and Circuits,Class-7,science
+Fun with Magnets,Class-7,science
+Our Environment,Class-7,science
+,,science
+Food and Its Component,Class-8,science
+Fibre to Fabric,Class-8,science
+Sorting and Separation of Materials,Class-8,science
+Matter and Changes Around Us,Class-8,science
+Living Organisms and Their Surroundings,Class-8,science
+Fun with Magnets,Class-8,science
+Our Environment,Class-8,science
+Nutrition,Class-8,science
+Transportation and Respiration in Plants and Animals,Class-8,science
+Heat and Light,Class-8,science
+"Acids, Bases and Salts",Class-8,science
+Physical and Chemical Changes,Class-8,science
+"Weather, Climate and Adaptations of Animals to Climate",Class-8,science
+"Winds, Storms and Cyclones",Class-8,science
+Natural Resources and their Conservation,Class-8,science
+Reproduction in Plants,Class-8,science
+"Motion, Measurement of distances and Time",Class-8,science
+Electric Current and Its Effect,Class-8,science
+,,science
+Synthetic Fibres and Plastics,Class-9,science
+Physical and Chemical Changes,Class-9,science
+"Weather, Climate and Adaptations of Animals to Climate",Class-9,science
+Natural Resources and their Conservation,Class-9,science
+Nutrition,Class-9,science
+Transportation and Respiration in Plants and Animals,Class-9,science
+Motion and Time,Class-9,science
+Electric Current and its Chemical Effect,Class-9,science
+"Light, Sound, Force and Pressure",Class-9,science
+Crop Production and Management,Class-9,science
+Micro-organisms,Class-9,science
+Synthetic Fibres and Plastics,Class-9,science
+Metals and Non-metals,Class-9,science
+Coal and Petroleum,Class-9,science
+"Heat, Combustion and Flame",Class-9,science
+Conservation of Plants and Animals,Class-9,science
+Cell,Class-9,science
+Some Natural Phenomena,Class-9,science
+Stars and Solar System,Class-9,science
+,,science
+Crop Production and Management,Class-10,science
+Micro-organisms,Class-10,science
+Synthetic Fibres and Plastics,Class-10,science
+Metals and Non-metals,Class-10,science
+Coal and Petroleum,Class-10,science
+"Heat, Combustion and Flame",Class-10,science
+Conservation of Plants and Animals,Class-10,science
+Reproduction in Animals,Class-10,science
+Electric Current and its Chemical Effect,Class-10,science
+"Some Natural Phenomena, Stars and Solar System",Class-10,science
+"Light, Sound, Force and Pressure",Class-10,science
+Matter in our Surroundings,Class-10,science
+"Mixtures, Solutions and Colloids",Class-10,science
+"Atoms, Molecules and Structure of Atom",Class-10,science
+Cells and Tissues,Class-10,science
+Diversity in Living Organisms,Class-10,science
+Laws of motion and Gravitation,Class-10,science
+"Force, Work and Energy",Class-10,science
+Why do we fall ill,Class-10,science
+Natural Resources,Class-10,science
+Improvement in Food Resources,Class-10,science
+,,science
+Matter in our Surroundings,Class-11,science
+"Mixtures, Solutions and Colloids",Class-11,science
+"Atoms, Molecules and Structure of Atom",Class-11,science
+Cells and Tissues,Class-11,science
+Diversity in Living Organisms,Class-11,science
+Laws of motion and Gravitation,Class-11,science
+"Force, Work, Sound and Energy",Class-11,science
+Why do we fall ill,Class-11,science
+Natural Resources,Class-11,science
+Chemical Reactions and Equations,Class-11,science
+"Acids, Bases and Salts",Class-11,science
+Metals and Non-metals,Class-11,science
+Carbon and Its Compounds,Class-11,science
+Periodic Classification of Elements,Class-11,science
+Life Processes and Heredity and Evolution,Class-11,science
+Light-Reflection and Refraction,Class-11,science
+Electricity and Magnetic Effects of Electric Current,Class-11,science
+Our Environment and Its Management,Class-11,science
+Improvement in Food Resources,Class-11,science
+,,
+Their Meanings and Opposites,Class-2,english
+Identify the Word From the Picture,Class-2,english
+Making a Word,Class-2,english
+Jumbled Letters,Class-2,english
+Feminine and Masculine,Class-2,english
+One and Many,Class-2,english
+Word Pairs,Class-2,english
+Odd One Out,Class-2,english
+Animals: Their Babies,Class-2,english
+Sounds and Groups,Class-2,english
+Nouns,Class-2,english
+Verbs,Class-2,english
+Articles,Class-2,english
+Comprehension (Prose and Poetry),Class-2,english
+,,english
+Their Meanings and Opposites,Class-3,english
+Identify the Word From the Picture,Class-3,english
+Making a Word,Class-3,english
+Word Pairs,Class-3,english
+Odd One Out,Class-3,english
+Jumbled Letters,Class-3,english
+Feminine and Masculine,Class-3,english
+One and Many,Class-3,english
+Nouns,Class-3,english
+Verbs,Class-3,english
+Pronouns,Class-3,english
+Adverbs,Class-3,english
+Collocations,Class-3,english
+Adjectives,Class-3,english
+Prepositions,Class-3,english
+Articles,Class-3,english
+Conjunctions,Class-3,english
+Contractions,Class-3,english
+Punctuation,Class-3,english
+Simple Tenses,Class-3,english
+Spellings,Class-3,english
+"Words related to animals and their sounds, groups, 
+Clothes, Body parts, Basic emotions, Food, etc",Class-3,english
+Proverbs and Phrase Pairs,Class-3,english
+"Search For and Retrieve Information From Various
+ Text Types Like Stories, Short Dialogues, Etc",Class-3,english
+"Acquire Broad Understanding Of and Look For 
+Specific Information In Short Texts Like Messages, Invitations, Etc",Class-3,english
+"Ability to Understand Situation-Based Variations In Functions 
+Like Thanking, Greeting, Asking for Permission, Introducing (oneself), Etc",Class-3,english
+Comprehension (Prose and Poetry),Class-3,english
+,Class-3,english
+"Word Power & Jumbled Words and Sentence Creation: Homophones, Collocations,
+ Spellings, Words related to animals, household things, clothes, basic emotions, food, animals, pets, etc",Class-3,english
+Gender and Relations,Class-3,english
+Singular-Plural and One Word Substitution,Class-3,english
+Synonyms and Antonyms,Class-3,english
+Verbs,Class-3,english
+Adverbs,Class-3,english
+Contractions,Class-3,english
+Adjectives,Class-3,english
+Articles and Prepositions,Class-3,english
+Simple Tenses-Present and Past,Class-3,english
+Conjunctions and Punctuations,Class-3,english
+Questions and Question Tags,Class-3,english
+Comprehension (Prose and Poetry),Class-3,english
+"Search For and Retrieve Information From Various Text Types Like Stories, Anecdotes, Etc",Class-3,english
+"Understand Information Through Pictures, Time-Table Format, Etc",Class-3,english
+"Spoken and Written Expressions: Acquire Broad Understanding Of and Look For Specific Information
+ In Short Texts Like Messages, Invitations, Etc.",Class-3,english
+"Ability to Understand Situation-Based Variations in Functions Like Apology, Greeting, Introduction, Request, Etc",Class-3,english
+"Search For and Retrieve Information From Various Text Types Like Stories, Short Dialogues, Etc. 
+Acquire Broad Understanding Of and Look For Specific Information In Short Texts Like Messages, Invitations, Etc",Class-3,english
+"Ability To Understand Situation-Based Variations In Functions Like Thanking,Greeting, Asking For Permission,
+ Introducing (oneself), Etc.",Class-3,english
+,,english
+"Word Power & Jumbled Words and Sentence Creation: Homophones, Collocations,
+ Spellings, Words related to animals, household things, clothes, basic emotions, food, animals, pets, etc",Class-4,english
+Gender and Relations,Class-4,english
+Singular-Plural and One Word Substitution,Class-4,english
+Synonyms and Antonyms,Class-4,english
+Verbs,Class-4,english
+Adverbs,Class-4,english
+Contractions,Class-4,english
+Adjectives,Class-4,english
+Articles and Prepositions,Class-4,english
+Simple Tenses-Present and Past,Class-4,english
+Conjunctions and Punctuations,Class-4,english
+Questions and Question Tags,Class-4,english
+Comprehension (Prose and Poetry),Class-4,english
+"Search For and Retrieve Information From Various Text Types Like Stories, Anecdotes, Etc",Class-4,english
+"Understand Information Through Pictures, Time-Table Format, Etc",Class-4,english
+"Spoken and Written Expressions: Acquire Broad Understanding Of and Look For Specific Information
+ In Short Texts Like Messages, Invitations, Etc.",Class-4,english
+"Ability to Understand Situation-Based Variations in Functions Like Apology, Greeting, Introduction, Request, Etc",Class-4,english
+"Search For and Retrieve Information From Various Text Types Like Stories, Short Dialogues, Etc. 
+Acquire Broad Understanding Of and Look For Specific Information In Short Texts Like Messages, Invitations, Etc",Class-4,english
+"Ability To Understand Situation-Based Variations In Functions Like Thanking,Greeting, Asking For Permission,
+ Introducing (oneself), Etc.",Class-4,english
+,,english
+"Word Power & Jumbled Words and Sentence Creation: Homophones, Collocations, Spellings, 
+Words related to animals, household things, clothes, basic emotions, food, animals, pets, etc.",Class-5,english
+Gender and Relations; Synonyms and Antonyms,class-5,english
+Singular-Plural and One Word Substitution,class-5,english
+Proverbs and Phrase Pairs,class-5,english
+Nouns and Pronouns,class-5,english
+Verbs and Adverbs,class-5,english
+Adjectives,class-5,english
+Articles and Prepositions,class-5,english
+Contractions,class-5,english
+Conjunctions and Punctuations,class-5,english
+"Comprehension (Stories and Poetry): Search For and Retrieve Information From Various Text 
+Types Like Stories, Anecdotes, Etc",class-5,english
+"Understand Information Through Pictures, Time-Table Format, Etc.",class-5,english
+"Spoken and Written Expressions: Acquire Broad Understanding Of and Look For Specific
+ Information In Short Texts Like Messages, Invitations, Etc.",class-5,english
+"Spoken and Written Expression: Ability to Understand Situation-Based Variations In Functions
+ Like Apology, Greeting, Introduction, Request, Etc.",class-5,english
+"Tenses - Simple, Present and Continuous",class-5,english
+,,english
+"Word Power & Jumbled Words and Sentence Creation : Collocations, spellings, words related to animals, 
+household things, clothes, basic emotions, food, animals, etc.",class-6,english
+Synonyms and Antonyms,class-6,english
+Nouns and PronounS,class-6,english
+Verbs and adverbs,class-6,english
+"Contractions, Phrasal Verbs",class-6,english
+Adjectives,class-6,english
+Articles and Prepositions,class-6,english
+"Comprehension (Prose and Poetry): Search For and Retrieve Information From Various Text Types Like Stories,
+ Anecdotes, Etc.",class-6,english
+"Understand information Through Pictures, Time-Table Format, Etc.",class-6,english
+"Spoken and Written Expression: Acquire Broad Understanding Of and Look For Specific Information In Short Texts Like Messages,
+ Invitations, Etc.",class-6,english
+"Spoken and Written Expression: Ability To Understand Situation-Based Variations In Functions Like Apology,
+ Greeting, Introduction, Request, Etc.",class-6,english
+"Tenses - Present - Perfect, Past - Simple, Continuous and Perfect",class-6,english
+"Passive Voice and Reported Speech; Short Composition (Notices and Messages),
+ Composition Based on Visual Stimulus and Letter",class-6,english
+,,english
+Nouns and Pronouns,class-7,english
+Verbs and Phrasal Verbs,class-7,english
+Adverbs,class-7,english
+Adjectives,class-7,english
+Articles,class-7,english
+Prepositions,class-7,english
+Conjunctions,class-7,english
+Punctuations,class-7,english
+"Tenses-Present perfect,Past Simple, Continuous and Perfect",class-7,english
+Jumbled Words,class-7,english
+Voice-Active and Passive and Reported Speech,class-7,english
+"Composition Based on Visual Stimulus and Letter; 
+Letter (Formal and Informal)",class-7,english
+"Short Composition: Notice, Message, Post Card, Diary Entry,
+ Newspaper Report and Poster Making",class-7,english
+Comprehension (Prose and Poetry),class-7,english
+Spoken and Written Expression,class-7,english
+,,english
+Nouns and Pronouns,class-8,english
+Verbs and Phrasal Verbs,class-8,english
+Adverbs,class-8,english
+Adjectives,class-8,english
+Articles,class-8,english
+Prepositions,class-8,english
+Conjunctions and Punctuations,class-8,english
+Tenses,class-8,english
+Reported Speech,class-8,english
+Voice-Active and Passive and Narration,class-8,english
+"Short Composition: Notice, Message, Post Card, Diary Entry, Newspaper Report and Poster Making",class-8,english
+Letter (Formal and Informal),class-8,english
+Sentences and Sentence Sequencing; Jumbled Words,class-8,english
+"Spellings, Collocations and Words related to Travel, Locations, Activities, Homonyms and Homophones, etc.
+ Synonyms and Antonyms; One Word Substitutions, Proverbs, Facts and Opinions",class-8,english
+"Phrasal Verbs and Idioms, Modals, Word order; Analogies",class-8,english
+"Short Composition (Notices, Messages and Letters): Search For and Retrieve Information From Various 
+Text Types Like News Stories, Brochures, Formal and Informal Letters and Advertisements.
+ Understand Information Given In News Reports, Brochures, Ltinerary, Etc.",class-8,english
+"Acquire Broad Understanding Of and Look For Specific Information In Short Narratives, Biographies, Notices and Messages, Etc.",class-8,english
+"Spoken and Written Expression: Ability To Understand Situation-Based Variations In Functions Like Requesting And Refusing, 
+Apologies and Stating of Preferences and Expression of Intent, Etc.",class-8,english
+Comprehension (Prose and Poetry),class-8,english
+,,english
+Nouns and Pronouns,class-9,english
+Verbs,class-9,english
+Adverbs,class-9,english
+Adjectives,class-9,english
+Articles and Prepositions,class-9,english
+Conjuctions and Determiners,class-9,english
+Prepositions,class-9,english
+Prepositional Phrases,class-9,english
+Participle Phrases,class-9,english
+Tenses,class-9,english
+Voices and Narration -Question Tags,class-9,english
+"One Word Substitutions, Proverbs and Phrasal Verbs, Concord, 
+Question Forms, Conditionals, Modals, Reported Speech. Collocations, Idioms",class-9,english
+Jumbled Words and Punctuations,class-9,english
+"Sentences and Sentence Sequencing; Understand Information Presented
+ In Instruction Manual Format, Message Format and Others",class-9,english
+"Acquire Broad Understanding Of and Look For Specific Information In Longer 
+Texts Like Editorials, Essays, Etc",class-9,english
+"Search For and Retrieve Information From Various Text Types Like News reports
+, Blurb, Dictionaries, Etc.",class-9,english
+"Synonyms and Antonyms, Homonyms, Homophones, Words Related To Social Cause
+, Travel, Workplace, Etc.",class-9,english
+Analogies and Spellings,class-9,english
+"One word substitutions, Phrasal Verbs and Idioms or Proverbs",class-9,english
+"Spoken and Written Expression: Ability to Understand Situation-Based Variations
+ In Fnunctions Like Requesting, Giving Information, Expressing Surprise, Pronunciation Etc.",class-9,english
+"Comprehension (Prose and Poetry): Acquire Broad Understanding Of and Look For
+ Specific InformationIn Longer TextsLike Editorials, Essays",class-9,english
+Composition,class-9,english
+,,english
+Nouns and Pronouns,class-10,english
+Verbs,class-10,english
+Adverbs,class-10,english
+Adjectives,class-10,english
+Articles and Prepositions,class-10,english
+Conjuctions and Determiners,class-10,english
+Prepositions,class-10,english
+Prepositional Phrases,class-10,english
+Participle Phrases,class-10,english
+Tenses,class-10,english
+Voices and Narration -Question Tags,class-10,english
+"One Word Substitutions, Proverbs and Phrasal Verbs, Concord, 
+Question Forms, Conditionals, Modals, Reported Speech. Collocations, Idioms",class-10,english
+Jumbled Words and Punctuations,class-10,english
+"Sentences and Sentence Sequencing; Understand Information Presented
+ In Instruction Manual Format, Message Format and Others",class-10,english
+"Acquire Broad Understanding Of and Look For Specific Information In Longer 
+Texts Like Editorials, Essays, Etc",class-10,english
+"Search For and Retrieve Information From Various Text Types Like News reports
+, Blurb, Dictionaries, Etc.",class-10,english
+"Synonyms and Antonyms, Homonyms, Homophones, Words Related To Social Cause
+, Travel, Workplace, Etc.",class-10,english
+Analogies and Spellings,class-10,english
+"One word substitutions, Phrasal Verbs and Idioms or Proverbs",class-10,english
+"Spoken and Written Expression: Ability to Understand Situation-Based Variations
+ In Fnunctions Like Requesting, Giving Information, Expressing Surprise, Pronunciation Etc.",class-10,english
+"Comprehension (Prose and Poetry): Acquire Broad Understanding Of and Look For
+ Specific InformationIn Longer TextsLike Editorials, Essays",class-10,english
+Composition,class-10,english
+,,english
+Nouns and Pronouns,class-11,english
+"Nouns (Nominalisation, Countable and Uncountable)",class-11,english
+Adverbs and Adjectives,class-11,english
+Articles and Prepositions,class-11,english
+Conjunctions and Determiners,class-11,english
+Verbs and Phrasal Verbs,class-11,english
+Tenses,class-11,english
+Voices and Narration,class-11,english
+"One Word Substitutions, Proverbs and Phrasal Verbs, Concord, Question forms, Conditionals, Modals, 
+Reported speech. Collocations, Idioms",class-11,english
+Sentences and Sentence Sequencing,class-11,english
+"Words Related to Leisure, Household Items/Issues, Social Causes, Outdoor Locations and Activities, Etc.",class-11,english
+Jumbled Words and Punctuations,class-11,english
+"Spoken and Written Expression: Ability to Understand Situation-Based Variations In Functions Like Giving Advice,
+ Stating Preferences, Discussing Probability, Making An Offer, Etc.",class-11,english
+"Synonyms and Antonyms, Homonyms, Homophones, Words Related To Weather, Countries, Language and people, 
+Global problems, Words Related To Social Cause, Travel, Workplace, Etc.",class-11,english
+Analogies and Spellings,class-11,english
+One Word Substitutions and Idioms; Word Order,class-11,english
+"Spoken and Written Expression: Ability To Understand Situation-Based Variations
+ In Functions Like Giving/Accepting Compliments,
+ Agreeing, Disagreeing, Requesting, Seeking Information, Pronunciation, Etc.",class-11,english
+"Comprehension (Prose and Poetry): Acquire Broad Understanding Of and Look For Specific 
+Information In Longer Texts Like Editorials, Essays",class-11,english
+Composition,class-11,english

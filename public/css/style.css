@@ -1234,7 +1234,7 @@ label, .label {
     padding-inline-start: 0;
     margin-bottom: 1rem;
 }
-.syllabus-list li {
+.syllabus-list h5 {
     font-size: 1em;
     font-weight: 500;
     font-stretch: normal;
@@ -1244,7 +1244,6 @@ label, .label {
     text-align: left;
     color: #000000;
     text-decoration: underline;
-    padding: 10px 0;
 }
 .divider-v-4 {
     width: 0;
@@ -1270,6 +1269,10 @@ label, .label {
 }
 .exam-table td {
     color: #000000;
+}
+
+.exam-table .mh{
+    min-height: 200px
 }
 .special .col-md-6 {
     padding: 2rem 0;

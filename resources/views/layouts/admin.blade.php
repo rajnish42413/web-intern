@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <link rel="stylesheet" href="/admin/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/admin/vendor/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link rel="stylesheet" href="/admin/css/style.default.css" id="theme-stylesheet">
     <link rel="stylesheet" href="/admin/css/custom.css">

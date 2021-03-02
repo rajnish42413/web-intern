@@ -29,9 +29,6 @@ Route::get('/ranking-criteria', function () {
     return view('ranking-criteria');
 });
 
-Route::get('/syllabus', function () {
-    return view('syllabus');
-});
 
 Route::get('/exam-information', function () {
     return view('exam-information');
@@ -74,3 +71,6 @@ Route::get('/olympiad-exam-answer', function () {
 
 
 
+
+Route::get('syllabus', 'HomeController@index');
+Route::get('syllabus/{standard}', 'HomeController@syllabus')->name('syllabus.class');

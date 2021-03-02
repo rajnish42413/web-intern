@@ -13,7 +13,7 @@
                 <div class="card">
                     <div class="card-header" id="headingFour">
                         <button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link" data-target="#collapseOne" data-toggle="collapse">
-                            - How to sign up for the program
+                             <i class="fa fa-plus"></i> How to sign up for the program
                         </button>
                     </div>
                     <div aria-labelledby="headingOne" class="collapse show" data-parent="#accordion" id="collapseOne">
@@ -25,7 +25,7 @@
                 <div class="card">
                     <div class="card-header" id="headingTwo">
                         <button aria-controls="collapseTwo" aria-expanded="false" class="btn btn-link collapsed" data-target="#collapseTwo" data-toggle="collapse">
-                            + How this program works?
+                            <i class="fa fa-plus"></i> How this program works?
                         </button>
                     </div>
                     <div aria-labelledby="headingTwo" class="collapse" data-parent="#accordion" id="collapseTwo">
@@ -37,7 +37,7 @@
                 <div class="card">
                     <div class="card-header" id="headingThree">
                         <button aria-controls="collapseThree" aria-expanded="false" class="btn btn-link collapsed" data-target="#collapseThree" data-toggle="collapse">
-                            + How this program works?
+                            <i class="fa fa-plus"></i> How this program works?
                         </button>
                     </div>
                     <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion" id="collapseThree">
@@ -51,7 +51,7 @@
                 <div class="card">
                     <div class="card-header" id="headingFour">
                         <button aria-controls="collapseFour" aria-expanded="true" class="btn btn-link" data-target="#collapseFour" data-toggle="collapse">
-                            - How to sign up for the program
+                            <i class="fa fa-plus"></i> How to sign up for the program
                         </button>
                     </div>
                     <div aria-labelledby="headingFour" class="collapse" data-parent="#accordion" id="collapseFour">
@@ -63,7 +63,7 @@
                 <div class="card">
                     <div class="card-header" id="headingFive">
                         <button aria-controls="collapseTwo" aria-expanded="false" class="btn btn-link collapsed" data-target="#collapseFive" data-toggle="collapse">
-                            + How this program works?
+                            <i class="fa fa-plus"></i>  How this program works?
                         </button>
                     </div>
                     <div aria-labelledby="headingFive" class="collapse" data-parent="#accordion" id="collapseFive">
@@ -75,7 +75,7 @@
                 <div class="card">
                     <div class="card-header" id="headingSix">
                         <button aria-controls="collapseSix" aria-expanded="false" class="btn btn-link collapsed" data-target="#collapseSix" data-toggle="collapse">
-                            + How this program works?
+                            <i class="fa fa-plus"></i>  How this program works?
                         </button>
                     </div>
                     <div aria-labelledby="headingSix" class="collapse" data-parent="#accordion" id="collapseSix">
@@ -87,7 +87,7 @@
                 <div class="card">
                     <div class="card-header" id="headingSeven">
                         <button aria-controls="collapseSeven" aria-expanded="false" class="btn btn-link collapsed" data-target="#collapseSeven" data-toggle="collapse">
-                            + How this program works?
+                            <i class="fa fa-plus"></i>  How this program works?
                         </button>
                     </div>
                     <div aria-labelledby="headingSeven" class="collapse" data-parent="#accordion" id="collapseSeven">

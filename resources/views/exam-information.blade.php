@@ -104,13 +104,17 @@
                          <tr>
                              <td class="text-left">WeIntern National Mathematics Olympiad (WNMO)</td>
                              <td rowspan="4">
-                                <h2 class="text-theme font-weight-bold">₹250/-</h2>
-                                <h3 class="header-3">For Classes 2-11</h3>
-                                <p class="text-muted">Olympiad Registration</p>
+                                <div class="mh">
+                                  <h2 class="text-theme font-weight-bold">₹250/-</h2>
+                                  <h3 class="header-3">For Classes 2-11</h3>
+                                  <p class="text-muted">Olympiad Registration</p>
+                                </div>
                              </td>
                               <td rowspan="4">
-                                <h2 class="text-theme font-weight-bold">₹250/-</h2>
-                                <h3 class="header-3">For 03 Mock Tests</h3>
+                                <div class="mh">
+                                 <h2 class="text-theme font-weight-bold">₹250/-</h2>
+                                 <h3 class="header-3">For 03 Mock Tests</h3>
+                                </div>
                              </td>
                               <td>
                                 <h2 class="text-theme font-weight-bold">₹400/-</h2>

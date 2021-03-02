@@ -35,153 +35,93 @@
         </div>
     </div>
 </section>
+
 <main id="main">
-    <div class="my-5 syllabus">
-        <div class="container">
-            <header class="section-header text-left">
-                <h2 class="text-left">
-                    WeIntern National Mathematics
-                    <br/>
-                    Olympiad
-                    <span>
-                        (WNMO)
-                    </span>
-                </h2>
-            </header>
-            <div class="row syllabus-card">
-                @for ($i = 2; $i < 12; $i++)
-                <a class="card" data-target="#myModal" data-toggle="modal" href="#">
-                    <h2>
-                        Class {{$i}}th
-                    </h2>
-                </a>
-                @endfor
-            </div>
-        </div>
-    </div>
-    <div class="my-5 syllabus">
-        <div class="container">
-            <header class="section-header text-left">
-                <h2 class="text-left">
-                    WeIntern National English
-                    <br/>
-                    Olympiad
-                    <span>
-                        (WNEO)
-                    </span>
-                </h2>
-            </header>
-            <div class="row syllabus-card">
-                @for ($i = 2; $i < 12; $i++)
-                <a class="card" data-target="#myModal" data-toggle="modal" href="#">
-                    <h2>
-                        Class {{$i}}th
-                    </h2>
-                </a>
-                @endfor
-            </div>
-        </div>
-    </div>
-    <div class="my-5 syllabus">
-        <div class="container">
-            <header class="section-header text-left">
-                <h2 class="text-left">
-                    WeIntern National Science
-                    <br/>
-                    Olympiad
-                    <span>
-                        (WNSO)
-                    </span>
-                </h2>
-            </header>
-            <div class="row syllabus-card">
-                @for ($i = 2; $i < 12; $i++)
-                <a class="card" data-target="#myModal" data-toggle="modal" href="#">
-                    <h2>
-                        Class {{$i}}th
-                    </h2>
-                </a>
-                @endfor
-            </div>
-        </div>
-    </div>
-    <div class="my-5 syllabus">
-        <div class="container">
-            <header class="section-header text-left">
-                <h2 class="text-left">
-                    WeIntern National Cyber
-                    <br/>
-                    Olympiad
-                    <span>
-                        (WNCO)
-                    </span>
-                </h2>
-            </header>
-            <div class="row syllabus-card">
-                @for ($i = 2; $i < 12; $i++)
-                <a class="card" data-target="#myModal" data-toggle="modal" href="#">
-                    <h2>
-                        Class {{$i}}th
-                    </h2>
-                </a>
-                @endfor
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="myModal">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                {{--
-                <button class="close" data-dismiss="modal" type="button">
-                    ×
-                </button>
-                --}}
-                <!-- Modal body -->
-                <div class="modal-body p-5">
-                    <header class="section-header text-left mb-2 pb-0">
-                        <h2 class="text-left">
-                            WeIntern National Cyber
-                            <br/>
-                            Olympiad
-                            <span>
-                                (WNCO)
-                            </span>
-                        </h2>
-                        <h3 class="text-theme my-3">
-                            Class 2nd
-                        </h3>
-                        <h3 class="heading-3">
-                            Topic to be covered
-                        </h3>
-                    </header>
-                    <div class="w-100">
-                        <div class="row justify-content-center">
-                            <div class="col-md-5">
-                                <ol class="syllabus-list">
-                                    @for ($i = 0; $i < 10 ; $i++)
-                                    <li class="underline heading-3">
-                                        Topic number one of class secod
-                                    </li>
-                                    @endfor
-                                </ol>
-                            </div>
-                            <div class="col-md-1 hidden-md-down align-content-between justify-content-center">
-                                <div class="divider-v-4">
+
+    @foreach ($subjects as $subject)
+         <div class="my-5 syllabus">
+             <div class="container">
+                 <header class="section-header text-left">
+                     <h2 class="text-left text-capitalize w-75">
+                        {{ $subject->full_name }}
+                         <span>
+                             ({{ $subject->abbr }})
+                         </span>
+                     </h2>
+                 </header>
+                 <div class="row syllabus-card">
+                    @foreach ($standards as $std)
+                        <a class="card" data-target="#myModal-{{$subject->id}}-{{$std->id}}" data-toggle="modal" href="#">
+                         <h2 class="text-capitalize">
+                             {{$std->name}}th
+                         </h2>
+                        </a>
+
+                        <div class="modal fade" id="myModal-{{$subject->id}}-{{$std->id}}">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-body p-5">
+                                        <header class="section-header text-left mb-2 pb-0">
+                                            <h2 class="text-left text-capitalize w-75">
+                                                {{ $subject->full_name }}
+                                                <span>
+                                                    ({{ $subject->abbr }})
+                                                </span>
+                                            </h2>
+                                            <h3 class="text-theme my-3 text-capitalize">
+                                               {{$std->name}}th
+                                            </h3>
+                                            <h3 class="heading-3">
+                                                Topic to be covered
+                                            </h3>
+                                        </header>
+                                        <div class="w-100">
+                                            <div class="row justify-content-center syllabus-list">
+
+                                                @if ($std->syllabuses)
+                                                  @foreach ($std->syllabuses as $key => $sy)
+                                                  <div class="col-md-6">
+                                                     <h5 class="underline">{{$key + 1 }}. {{ $sy->name }}</h5>
+                                                  </div>
+                                                 @endforeach
+                                                @endif
+                                                
+
+                                                
+
+                                               {{--  <div class="col-md-5">
+                                                    <ol class="syllabus-list">
+                                                        @for ($i = 0; $i < 10 ; $i++)
+                                                        <li class="underline heading-3">
+                                                            Topic number one of class secod
+                                                        </li>
+                                                        @endfor
+                                                    </ol>
+                                                </div>
+                                                <div class="col-md-1 hidden-md-down align-content-between justify-content-center">
+                                                    <div class="divider-v-4">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <ol class="syllabus-list">
+                                                        @for ($i = 0; $i < 10 ; $i++)
+                                                        <li class="underline heading-3">
+                                                            Topic number one of class secod
+                                                        </li>
+                                                        @endfor
+                                                    </ol>
+                                                </div> --}}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-5">
-                                <ol class="syllabus-list">
-                                    @for ($i = 0; $i < 10 ; $i++)
-                                    <li class="underline heading-3">
-                                        Topic number one of class secod
-                                    </li>
-                                    @endfor
-                                </ol>
-                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+                    @endforeach
+                 </div>
+             </div>
+         </div>
+    @endforeach
 </main>
+@stop
