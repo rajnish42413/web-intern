@@ -116,10 +116,10 @@
                         </br>
                     </h2>
                     <div class="w-100 btns">
-                        <a class="btn btn-primary">
+                        <a class="btn btn-primary" href="{{ route('register',['type' => 'student']) }}">
                             Sign Up as Student
                         </a>
-                        <a class="btn btn-primary">
+                        <a class="btn btn-primary" href="{{ route('register',['type' => 'school']) }}">
                             Sign Up as School
                         </a>
                     </div>

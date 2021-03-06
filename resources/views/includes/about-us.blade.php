@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-6">
-                <img src="img/home/banner-3.png">
+                <img src="{{ asset('img/home/banner-3.png') }}">
                 </img>
             </div>
             <div class="col-md-6 content">

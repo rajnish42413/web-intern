@@ -17,6 +17,11 @@ class HomeController extends Controller
 	   return view('syllabus', compact('subjects','standards'));
 	}
 
+   public function register($type)
+   {
+      return view($type.'-register');
+   }
+
    public function syllabus(Request $request,$standard)
    {
       if (!($standard && $request->subject_id)) {

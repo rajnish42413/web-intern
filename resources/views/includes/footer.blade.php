@@ -76,7 +76,7 @@
         &copy; Copyright <strong><span>WebIntern</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed by <a href="https://github.com/rajnish42413">Rajnish Singh</a>
+        Designed & Developed by <a href="https://github.com/rajnish42413">Rajnish Singh</a>
       </div>
     </div>
   </footer>

@@ -87,7 +87,7 @@
                             <p>
                                 Fees per olympiad & group packages as well as dates of every olympiad.
                             </p>
-                            <a href="#">
+                            <a href="{{ url('exam-information') }}">
                                 Read More >
                             </a>
                         </img>
@@ -121,7 +121,7 @@
                             <p>
                                 No. of questions in every olympiad & marks for every correct & incorrect answer.
                             </p>
-                            <a href="#">
+                            <a href="{{ url('ranking-criteria') }}">
                                 Read More >
                             </a>
                         </img>
@@ -138,7 +138,7 @@
                             <p>
                                 The syllabus for every olympiad based on last year’s curriculum.
                             </p>
-                            <a href="#">
+                            <a href="{{ url('syllabus') }}">
                                 Read More >
                             </a>
                         </img>
@@ -148,7 +148,7 @@
                     <div class="box" data-aos="fade-up" data-aos-delay="600">
                         <img alt="" class="img-fluid" src="img/icons/guidelines.svg">
                             <h3>
-                                Marking Scheme & Ranking Criteria
+                                Guidelines
                             </h3>
                             <div class="divider-100">
                             </div>

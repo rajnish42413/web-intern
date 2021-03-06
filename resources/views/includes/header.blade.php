@@ -2,7 +2,7 @@
     <div class="container container-xl d-flex align-items-center justify-content-between">
 
       <a href="/" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
+        {{-- <img src="{{ asset('img/logo.png') }}" alt=""> --}}
         <span>WebIntern</span>
       </a>
 

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('links');
+    return view('home');
 });
 
 Route::get('/home', function () {
@@ -33,15 +33,11 @@ Route::get('/ranking-criteria', function () {
 Route::get('/exam-information', function () {
     return view('exam-information');
 });
-Route::get('/school-register', function () {
-    return view('school-register');
-});
+
 Route::get('/individual-register', function () {
     return view('individual-register');
 });
-Route::get('/student-register', function () {
-    return view('student-register');
-});
+
 
 Route::get('/user', function () {
     return view('user/dashboard');
@@ -74,3 +70,4 @@ Route::get('/olympiad-exam-answer', function () {
 
 Route::get('syllabus', 'HomeController@index');
 Route::get('syllabus/{standard}', 'HomeController@syllabus')->name('syllabus.class');
+Route::get('register/{type}', 'HomeController@register')->name('register');
