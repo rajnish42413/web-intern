@@ -70,4 +70,8 @@ Route::get('/olympiad-exam-answer', function () {
 
 Route::get('syllabus', 'HomeController@index');
 Route::get('syllabus/{standard}', 'HomeController@syllabus')->name('syllabus.class');
-Route::get('register/{type}', 'HomeController@register')->name('register');
+Route::get('register/student', 'HomeController@registerStudent');
+Route::get('register/school', 'HomeController@registerSchool');
+
+Auth::routes();
+Route::get('/dashboard', [App\Http\Controllers\StudentController::class, 'index'])->name('user.home');

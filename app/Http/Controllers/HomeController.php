@@ -17,9 +17,14 @@ class HomeController extends Controller
 	   return view('syllabus', compact('subjects','standards'));
 	}
 
-   public function register($type)
+   public function registerStudent()
    {
-      return view($type.'-register');
+      return view('student-register');
+   }
+
+   public function registerSchool()
+   {
+      return view('school-register');
    }
 
    public function syllabus(Request $request,$standard)

@@ -7,7 +7,7 @@
                         R S
                     </div>
                     <div class="user">
-                        <h3>Rajnish Singh</h3>
+                        <h3 class="text-capitalize">{{ auth()->user()->name }}</h3>
                         <p>Basic Plan</p>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
             --}}
             <ul class="side-menu list-unstyled" id="side-main-menu">
                 <li>
-                    <a href="/user">
+                    <a href="{{ url('/dashboard') }}">
                         <i class="fa fa-home">
                         </i>
                         Home 
@@ -82,11 +82,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                         <i class="fa fa-sign-out">
                         </i>
                         Logout
                     </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                 </li>
             </ul>
         </div>

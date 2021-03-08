@@ -13,7 +13,7 @@
                     WeIntern Summer Olympiad will be India’s 1st Summer Olympiad for classes 2nd to 11th. The olympiad will be
                 </h2>
                 <div>
-                    <a class="btn-get-started" data-aos="fade-up" data-aos-delay="500" href="{{ url('register') }}">
+                    <a class="btn-get-started" data-aos="fade-up" data-aos-delay="500" href="{{ url('register/student') }}">
                         Sign Up Now
                     </a>
                 </div>
