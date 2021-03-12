@@ -33,21 +33,21 @@
             --}}
             <ul class="side-menu list-unstyled" id="side-main-menu">
                 <li>
-                    <a href="{{ url('/dashboard') }}">
+                    <a href="{{ url('/user') }}" class="{{ request()->is('user') ? 'active' : '' }}">
                         <i class="fa fa-home">
                         </i>
                         Home 
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="fa fa-pencil-square-o">
+                    <a href="{{ route('user/edit') }}" class="{{ request()->is('user/edit') ? 'active' : '' }}">
+                        <i class="fa fa-pencil-square-o" >
                         </i>
                         Edit Profile
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('user/verification') }}" class="{{ request()->is('user/profile-verification') ? 'active' : '' }}">
                         <i class="fa fa-user-plus">
                         </i>
                         Profile Verification
@@ -90,8 +90,8 @@
                         Logout
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
+                     @csrf
+                    </form>
                 </li>
             </ul>
         </div>

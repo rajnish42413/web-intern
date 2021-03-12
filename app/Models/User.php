@@ -41,4 +41,27 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function student()
+    {
+        return $this->hasOne(StudentDetail::class);
+    }
+
+    public function strength()
+    {
+       $total = 0;
+       $user = $this;
+
+       if ($user->name) $total++;
+       if ($user->student && $user->student->standard)  $total++;
+       if ($user->student && $user->student->school_name)  $total++;
+       if ($user->student && $user->student->id_proof)  $total++;
+       if ($user->student && $user->student->id_front)  $total++;
+       if ($user->student && $user->student->id_back)  $total++;
+       if ($user->student && $user->profile_photo)  $total++;
+       if ($user->student && $user->student->date_of_birth)  $total++;
+       if ($total < 7) return 50;
+       return 100;
+    }
 }

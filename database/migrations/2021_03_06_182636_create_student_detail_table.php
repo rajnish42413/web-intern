@@ -18,6 +18,11 @@ class CreateStudentDetailTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('standard')->nullable();
             $table->string('school_name')->nullable();
+            $table->string('id_proof')->nullable();
+            $table->string('id_front')->nullable();
+            $table->string('id_back')->nullable();
+            $table->string('profile_photo')->nullable();
+            $table->date('date_of_birth')->nullable();
             $table->timestamps();
         });
     }

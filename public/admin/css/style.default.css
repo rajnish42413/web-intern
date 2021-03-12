@@ -9,6 +9,33 @@ ul{
     margin-inline-end: 0px;
     padding-inline-start: 0;
 }
+.icon-lg{
+  font-size: 2em;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
 
 .text-small {
   font-size: 0.9rem;
@@ -99,10 +126,39 @@ table {
 .page.active {
 
 }
+h1{
+  font-size: 1.5em;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.34;
+  letter-spacing: normal;
+  text-align: center;
+  color: #191919;
+}
 
 h2 {
   color: #555;
   font-weight: 400;
+}
+
+p{
+  font-size: 1.2em;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+}
+
+.alert-success{
+  border-radius: 29px;
+  background-color: #3eaa6d;
+  color: #ffffff;
+}
+
+.alert{
+  border-radius: 29px;
 }
 
 .page-header{
@@ -453,7 +509,7 @@ nav.navbar a.menu-btn:hover {
   letter-spacing: normal;
 }
 
-.side-navbar li a:focus, .side-navbar li a:hover, .side-navbar li a[aria-expanded="true"] {
+.side-navbar li a:focus, .side-navbar li a:hover, .side-navbar li a[aria-expanded="true"] ,.side-navbar li a.active {
   background: #fff;
   color: #3eaa6d;
   text-decoration: none;
@@ -3383,4 +3439,15 @@ a > code {
     transform: rotate(90deg);
     left: -28px;
     top: 10px;
+  }
+
+  .answer-block h1{
+     font-size: 1.8em;
+     font-weight: normal;
+  }  
+  .answer-block .btn-primary{
+      background-color: #3eaa6d;
+      color: #fff;
+      font-size: 34px;
+      font-weight: 900;
   }

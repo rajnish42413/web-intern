@@ -74,4 +74,10 @@ Route::get('register/student', 'HomeController@registerStudent');
 Route::get('register/school', 'HomeController@registerSchool');
 
 Auth::routes();
-Route::get('/dashboard', [App\Http\Controllers\StudentController::class, 'index'])->name('user.home');
+Route::prefix('user')->name('user/')->group(static function() {
+        Route::get('/',                                    'StudentController@index')->name('home');
+        Route::get('/edit',                                'StudentController@edit')->name('edit');
+        Route::post('/update',                                    'StudentController@update')->name('update');
+        Route::get('/profile-verification',                'StudentController@verification')->name('verification');
+});
+

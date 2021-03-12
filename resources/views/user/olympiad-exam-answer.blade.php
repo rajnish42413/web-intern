@@ -25,13 +25,13 @@
     </div>
 </div>
 <section>
-    <div class="container-fluid">
+    <div class="container-fluid answer-block">
         <div class="card p-4 100 h-75">
             <div class="row justify-content-center">
                 <div class="col-md-5 text-center">
-                    <img height="auto" src="{{ asset('admin/icon/icon-03.svg') }}" width="100%">
-                        <h1 class="my-4">
-                            The olympiad exam answer key will be available on
+                    <img height="auto" src="{{ asset('admin/icon/icon-03.svg') }}" width="80%">
+                        <h1 class="my-5">
+                            The olympiad exam answer key <br/> will be available on
                         </h1>
                         <a class="btn btn-primary my-4 px-5" href="#">
                             May 03, 2021

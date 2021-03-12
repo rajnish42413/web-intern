@@ -4,17 +4,21 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
-class Student extends Model
+class Student extends User
 {
-    use HasFactory;
-
-    protected $guarded = ['id'];
-    protected $table = 'student_detail';
-
-    protected $dates = [
-		'created_at',
-		'updated_at',
 	
-	];
+
+   public static function boot()
+    {
+        parent::boot();
+        static::addGlobalScope('latest', function ($q) {
+            $q->latest();
+        });
+
+        static::addGlobalScope('students', function ($q) {
+            $q->where('role', 'student');
+        });
+    }
 }

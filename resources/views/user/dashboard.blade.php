@@ -27,11 +27,11 @@
 <section class="dashboard-counts">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card">
                     <div>
                         <h2>
-                            02
+                            04
                         </h2>
                         <h3>
                             Total Olympiads
@@ -46,14 +46,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card">
                     <div>
                         <h2>
-                            02
+                            00
                         </h2>
                         <h3>
-                            Total Olympiads
+                            My Olympiads
                         </h3>
                     </div>
                     <div class="text-right">
@@ -65,14 +65,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card">
                     <div>
                         <h2>
-                            02
+                            {{ auth()->user()->strength() }} %
                         </h2>
                         <h3>
-                            Total Olympiads
+                            Profile Strength
                         </h3>
                     </div>
                     <div class="text-right">
@@ -84,32 +84,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <div>
-                        <h2>
-                            02
-                        </h2>
-                        <h3>
-                            Total Olympiads
-                        </h3>
-                    </div>
-                    <div class="text-right">
-                        <img height="auto" src="{{ asset('admin/icon/icon-01.svg') }}" width="46px">
-                            <a href="#">
-                                View More
-                            </a>
-                        </img>
-                    </div>
-                </div>
-            </div>
+         
         </div>
     </div>
 </section>
 <section>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="card border-primary border p-4">
@@ -150,7 +132,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 mb-3">
                         <div class="card-dark p-4 mb-4 list-flex">
                             <div>
                             <h3 class="text-white my-2">Update Profile</h3>
@@ -160,7 +142,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-12">
+                    <div class="col-md-12 mb-2">
                         <div class="card card-dark p-4 mb-4 list-flex">
                             <div>
                              <h3 class="text-white my-2">Verify Your Profile</h3>
@@ -171,11 +153,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                <div class="card p-5 card-sec text-center">
                     <img src="{{ asset('admin/icon/icon-02.svg') }}" width="80%" height="auto" class="mx-auto">
                     <h1 class="my-4">Take WeIntern Mock Test</h1>
-                    <p class="my-4">Practice now before olympiad</p>
+                    <p class="mb-4 text-muted text-center">Practice now before olympiad</p>
                     <a href="#" class="btn btn-dark btn-lg">Practice Now</a>
                </div>
             </div>
