@@ -31,8 +31,12 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="text-center">
-                            <img src="{{ asset('uploads/profile_images/'.$student->profile_photo) }}"
-                             class="profile-image rounded" width="140px" height="auto">
+                            @if ($student->profile_photo)
+                            <img src="/uploads/profile_images/{{$student->profile_photo}}" class="profile-image rounded" width="140px" height="auto">
+                           @else
+                            <img src='https://avataaars.io/?avatarStyle=Circle&topType=WinterHat4&accessoriesType=Blank&hatColor=Blue01&facialHairType=MoustacheMagnum&facialHairColor=Auburn&clotheType=GraphicShirt&clotheColor=Gray01&graphicType=Pizza&eyeType=Side&eyebrowType=DefaultNatural&mouthType=Sad&skinColor=Tanned'
+                             class="profile-image rounded" width="140px" height="auto">                           
+                          @endif
 
                              <h2 class="text-primary text-capitalize my-4">{{ $user->name }} </h2>
 
