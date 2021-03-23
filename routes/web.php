@@ -77,7 +77,8 @@ Auth::routes();
 Route::prefix('user')->name('user/')->group(static function() {
         Route::get('/',                                    'StudentController@index')->name('home');
         Route::get('/edit',                                'StudentController@edit')->name('edit');
-        Route::post('/update',                                    'StudentController@update')->name('update');
+        Route::post('/update',                             'StudentController@update')->name('update');
         Route::get('/profile-verification',                'StudentController@verification')->name('verification');
+        Route::post('/update/id-proof',                    'StudentController@updateIdProof')->name('id-proof');
 });
 

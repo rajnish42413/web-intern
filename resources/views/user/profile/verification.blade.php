@@ -31,8 +31,9 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="text-center">
-                            <img src='https://avataaars.io/?avatarStyle=Circle&topType=WinterHat4&accessoriesType=Blank&hatColor=Blue01&facialHairType=MoustacheMagnum&facialHairColor=Auburn&clotheType=GraphicShirt&clotheColor=Gray01&graphicType=Pizza&eyeType=Side&eyebrowType=DefaultNatural&mouthType=Sad&skinColor=Tanned'
+                            <img src="{{ asset('uploads/profile_images/'.$student->profile_photo) }}"
                              class="profile-image rounded" width="140px" height="auto">
+
                              <h2 class="text-primary text-capitalize my-4">{{ $user->name }} </h2>
 
                              <div class="alert alert-warning w-50 mx-auto">
@@ -40,7 +41,7 @@
                              </div>
                         </div>
                        
-                        <form action="{{ url('user/update') }}" method="POST">
+                        <form action="{{ url('user/update/id-proof') }}" method="POST" enctype="multipart/form-data">
                             @csrf 
                             {{ method_field('POST') }}
 
@@ -50,7 +51,7 @@
                                        <label>
                                            Full Name
                                        </label>
-                                       <input class="form-control" placeholder="name" type="name" name="name" value="{{ $user->name }}" />
+                                       <input class="form-control" placeholder="name" type="name" name="name" value="{{ $user->name }}" readonly />
                                    </div> 
                                 </div>
                                 <div class="col-md-6 my-3">
@@ -58,7 +59,7 @@
                                        <label>
                                            Date of Birth
                                        </label>
-                                       <input class="form-control" placeholder="Date of Birth" type="date" name="dob" value="{{ $student->date_of_birth }}" />
+                                       <input class="form-control" placeholder="Date of Birth" type="date" name="dob" value="{{ $student->date_of_birth }}" readonly />
                                    </div> 
                                 </div>
                                 <div class="col-md-6 my-3">
@@ -67,35 +68,55 @@
                                            Identity Proof
                                        </label>
                                        <select class="form-control" name="id_proof">
-                                           <option value="aadhar card">aadhar card</option>
+                                           <option value="aadhar-card">aadhar card</option>
                                        </select>
                                    </div> 
                                 </div>
                             </div>
 
-                             <div class="row">
-                                <div class="col-md-6 my-3">
-                                   <div class="card card-sec p-5 text-center">
-                                       <i class="fa fa-upload my-3 icon-lg"></i>
-                                       <div class="upload-btn-wrapper">
-                                         <button class="btn btn-default">Upload a file</button>
-                                         <input type="file" name="myfile" />
-                                       </div>
-                                   </div> 
-                                </div>
 
+
+                            <div class="row">
+                                @if (!$student->id_front)
                                 <div class="col-md-6 my-3">
                                    <div class="card card-sec p-5 text-center">
                                        <i class="fa fa-upload my-3 icon-lg"></i>
                                        <div class="upload-btn-wrapper">
                                          <button class="btn btn-default">Upload a file</button>
-                                         <input type="file" name="myfile" />
+                                         <input type="file" name="id_front" />
+                                         @error('id_front')
+                                             <div class="small my-1 text-danger">{{ $message }}</div>
+                                         @enderror
                                        </div>
                                    </div> 
                                 </div>
+                                @else
+                                <div class="col-md-6">
+                                 <img src="{{ asset('uploads/id_proofs/'.$student->id_front) }}" width="100%" height="auto" />
+                                </div>
+                                @endif
+
+                               @if (!$student->id_back)
+                                  <div class="col-md-6 my-3">
+                                   <div class="card card-sec p-5 text-center">
+                                       <i class="fa fa-upload my-3 icon-lg"></i>
+                                       <div class="upload-btn-wrapper">
+                                         <button class="btn btn-default">Upload a file</button>
+                                         <input type="file" name="id_back" />
+                                         @error('id_back')
+                                             <div class="small my-1 text-danger">{{ $message }}</div>
+                                         @enderror
+                                       </div>
+                                   </div> 
+                                </div>
+                                @else
+                                 <div class="col-md-6">
+                                  <img src="{{ asset('uploads/id_proofs/'.$student->id_back) }}" width="100%" height="auto" />
+                                 </div>
+                                @endif
                             </div>
                          
-                            <div class="text-right">
+                            <div class="text-right mt-4">
                                 <button class="btn btn-primary px-4" type="submit">Save</button>
                                  <button class="btn btn-primary px-4" type="btn">Submit</button>
                             </div>

@@ -31,16 +31,16 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="text-center">
-                            <img src='https://avataaars.io/?avatarStyle=Circle&topType=WinterHat4&accessoriesType=Blank&hatColor=Blue01&facialHairType=MoustacheMagnum&facialHairColor=Auburn&clotheType=GraphicShirt&clotheColor=Gray01&graphicType=Pizza&eyeType=Side&eyebrowType=DefaultNatural&mouthType=Sad&skinColor=Tanned'
+                            <img src="{{ asset('uploads/profile_images/'.$student->profile_photo) }}"
                              class="profile-image rounded" width="140px" height="auto">
                              <h2 class="text-primary text-capitalize my-4">{{ $user->name }} </h2>
 
-                             <div class="alert alert-success w-50 mx-auto">
+                             {{-- <div class="alert alert-success w-50 mx-auto">
                                <strong>Success!</strong> Indicates a successful or positive action.
-                             </div>
+                             </div> --}}
                         </div>
                        
-                        <form action="{{ url('user/update') }}" method="POST">
+                        <form action="{{ url('user/update') }}" method="POST" enctype="multipart/form-data">
                             @csrf 
                             {{ method_field('POST') }}
 
@@ -81,6 +81,14 @@
                                          </option>
                                         @endfor
                                     </select>
+                                </div>
+
+                                <div class="col-md-6 my-3">
+                                    <label> Select Profile Photo</label>
+                                    <input type="file" name="profile_image" class="form-control">
+                                    @error('profile_image')
+                                        <div class="small my-1 text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                          

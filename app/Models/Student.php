@@ -21,4 +21,9 @@ class Student extends User
             $q->where('role', 'student');
         });
     }
+
+    public function detail()
+    {
+        return $this->hasOne(StudentDetail::class,'user_id');
+    }
 }
