@@ -76,12 +76,6 @@ class RegisterController extends Controller
             'password' => Hash::make('rajnish123')
         ]);
 
-        $student = Student::create([
-          'standard' => $data['standard'],
-          'school_name' => $data['school'],
-          'user_id' => $user->id
-        ]);
-
         return $user;
     }
 }

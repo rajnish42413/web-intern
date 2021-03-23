@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Standard;
 use App\Models\Syllabus;
 use App\Models\Subject;
+use App\Models\StudentDetail;
 use Intervention\Image\ImageManagerStatic as Image;
 
 class StudentController extends Controller
@@ -21,7 +22,7 @@ class StudentController extends Controller
 		$user = auth()->user();
 	    $student = $user->student;
 	    if(!$student){
-	  	$student = Student::create([
+	  	$student = StudentDetail::create([
 	  	  'user_id' => $user->id
 	  	]);
 	  }
@@ -33,7 +34,7 @@ class StudentController extends Controller
 	  $user = auth()->user();
 	  $student = $user->student;
 	  if(!$student){
-	  	$student = Student::create([
+	  	$student = StudentDetail::create([
 	  	  'user_id' => $user->id
 	  	]);
 	  }
