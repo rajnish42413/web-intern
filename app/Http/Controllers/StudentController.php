@@ -20,6 +20,11 @@ class StudentController extends Controller
 	{
 		$user = auth()->user();
 	    $student = $user->student;
+	    if(!$student){
+	  	$student = Student::create([
+	  	  'user_id' => $user->id
+	  	]);
+	  }
 		return view('user.profile.verification',compact('user','student'));
 	}
 
@@ -27,6 +32,11 @@ class StudentController extends Controller
 	{
 	  $user = auth()->user();
 	  $student = $user->student;
+	  if(!$student){
+	  	$student = Student::create([
+	  	  'user_id' => $user->id
+	  	]);
+	  }
 	  return view('user.profile.edit',compact('user','student'));
 	}
 
