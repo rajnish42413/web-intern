@@ -8,6 +8,9 @@ use App\Models\User;
 
 class Student extends User
 {
+
+    protected $guarded = ['id'];
+    protected $table = 'student_detail';
 	
 
    public static function boot()
