@@ -64,6 +64,9 @@ Route::get('/olympiad-exam', function () {
 Route::get('/olympiad-exam-answer', function () {
     return view('user/olympiad-exam-answer');
 });
+Route::get('/awards-and-recognition', function () {
+    return view('awards-and-recognition');
+});
 
 
 
@@ -71,6 +74,7 @@ Route::get('/olympiad-exam-answer', function () {
 Route::get('syllabus', 'HomeController@index');
 Route::get('syllabus/{standard}', 'HomeController@syllabus')->name('syllabus.class');
 Route::get('register/student', 'HomeController@registerStudent');
+Route::get('register/school', 'HomeController@registerSchool');
 Route::get('register/school', 'HomeController@registerSchool');
 
 Auth::routes();

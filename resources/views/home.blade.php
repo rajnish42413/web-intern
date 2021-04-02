@@ -104,7 +104,7 @@
                             <p>
                                 Cash Prizes, Goodies & Electronics, Trophies, Medals & Merit Certificates etc. will be awarded to Top 50% Students in each olympiads.
                             </p>
-                            <a href="#">
+                            <a href="{{ url('awards-and-recognition') }}">
                                 Read More >
                             </a>
                         </img>
