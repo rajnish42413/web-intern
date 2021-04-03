@@ -56,7 +56,24 @@
                                        <label>
                                            Full Name
                                        </label>
-                                       <input class="form-control" placeholder="name" type="name" name="name" value="{{ $user->name }}" />
+                                       <input readonly disabled class="form-control" placeholder="name" type="name" name="name" value="{{ $user->name }}" />
+                                   </div> 
+                                </div>
+                                <div class="col-md-6 my-3">
+                                   <div class="form-group">
+                                       <label>
+                                           Email
+                                       </label>
+                                       <input readonly disabled class="form-control" placeholder="Email" type="email" name="email" value="{{ auth()->user()->email }}" />
+                                   </div> 
+                                </div>
+
+                                 <div class="col-md-6 my-3">
+                                   <div class="form-group">
+                                       <label>
+                                           Mobile No
+                                       </label>
+                                       <input readonly disabled class="form-control" placeholder="Mobile no" type="number" name="" value="{{ $student->mobile }}" />
                                    </div> 
                                 </div>
                                 <div class="col-md-6 my-3">
@@ -81,13 +98,16 @@
                                         <option>
                                             Select Class
                                         </option>
-                                        @for ($i = 2; $i < 12; $i++)
+                                        @for ($i = 2; $i <= 12; $i++)
                                          <option value="{{$i}}" @if ($student->standard == $i) selected @endif>
                                             class {{$i}}th
                                          </option>
                                         @endfor
                                     </select>
                                 </div>
+
+                               
+
 
                                 <div class="col-md-6 my-3">
                                     <label> Select Profile Photo</label>

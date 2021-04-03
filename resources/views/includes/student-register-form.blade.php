@@ -62,7 +62,7 @@
                     <option>
                         Select Class
                     </option>
-                    @for ($i = 2; $i < 12; $i++)
+                    @for ($i = 2; $i <= 12; $i++)
                     <option value="{{$i}}">
                         class {{$i}}th
                     </option>

@@ -36,7 +36,7 @@
                     </span>
                 </h2>
                 <p>
-                    WeIntern Summer Olympiad will be India’s 1st Summer Olympiad for classes 2nd to 11th. The olympiad will be based on previous years curriculum that the student would have completed in their 2021 curriculum. WeIntern Summer Olympiad will focus on assessing students practical & concept application, thinking ability & reasoning skills.
+                    WeIntern Summer Olympiad will be India’s 1st Summer Olympiad for classes 2nd to 12th. The olympiad will be based on previous years curriculum that the student would have completed in their 2021 curriculum. WeIntern Summer Olympiad will focus on assessing students practical & concept application, thinking ability & reasoning skills.
                 </p>
             </header>
             <div class="row justify-content-center">
@@ -46,7 +46,7 @@
                             For Classes
                         </li>
                         <li class="value">
-                            Class 2nd-11th
+                            Class 2nd-12th
                         </li>
                     </ul>
                     <ul>
@@ -155,7 +155,7 @@
                             <p>
                                 Guidelines for all olympiad takers to read before starting the exam.
                             </p>
-                            <a href="#">
+                            <a href="{{ url('benefits-for-schools') }}">
                                 Read More >
                             </a>
                         </img>

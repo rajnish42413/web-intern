@@ -60,10 +60,14 @@ ul{
   line-height: 2;
 }
 
-a {
+a ,.row a{
   display: inline-block;
   text-decoration: none;
   color: #fff;
+}
+
+a:hover , .row a:focous , .row a:hover, .row a:active{
+  text-decoration: none;
 }
 
 body {

@@ -72,7 +72,10 @@
                                            Identity Proof
                                        </label>
                                        <select class="form-control" name="id_proof">
-                                           <option value="aadhar-card">aadhar card</option>
+                                           <option value="aadhar-card">Aadhar Card</option>
+                                           <option value="pan-card">Pan card </option>
+                                           <option value="passport">Passport </option>
+                                           <option value="school-id">School Id </option>
                                        </select>
                                    </div> 
                                 </div>

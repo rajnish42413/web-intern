@@ -61,7 +61,6 @@ class User extends Authenticatable
        if ($user->student && $user->student->id_back)  $total++;
        if ($user->student && $user->profile_photo)  $total++;
        if ($user->student && $user->student->date_of_birth)  $total++;
-       if ($total < 7) return 50;
-       return 100;
+       return (int) round(($total / 7) * 100);
     }
 }

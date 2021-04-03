@@ -8,7 +8,7 @@
                     </div>
                     <div class="user">
                         <h3 class="text-capitalize">{{ auth()->user()->name }}</h3>
-                        <p>Basic Plan</p>
+                        {{-- <p>Basic Plan</p> --}}
                     </div>
                 </div>
             </div>

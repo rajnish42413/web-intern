@@ -67,6 +67,9 @@ Route::get('/olympiad-exam-answer', function () {
 Route::get('/awards-and-recognition', function () {
     return view('awards-and-recognition');
 });
+Route::get('/benefits-for-schools', function () {
+    return view('benefits-for-schools');
+});
 
 
 

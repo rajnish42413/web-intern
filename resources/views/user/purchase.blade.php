@@ -28,50 +28,61 @@
     <div class="container-fluid">
         <div class="card p-4 w-100">
             <h3>
-                My Olympiad
+                My Olympiad ( PURCHASES )
             </h3>
             <p class="text-muted mt-2">
-                Lorem Ipsum dolor sitor orem Ipsum dolor sitororem Ipsum dolor sitororem Ipsum dolor sitororem Ipsum dolor sitorore
-            </p>
-            <ul class="list-order">
-                <li class="active">
-                    WeIntern National Mathematics Olympiad (WNMO)
-                </li>
-                <li>
-                    WeIntern National Mathematics Olympiad (WNMO)
-                </li>
-                <li>
-                    WeIntern National Mathematics Olympiad (WNMO)
-                </li>
-                <li>
-                    WeIntern National Mathematics Olympiad (WNMO)
-                </li>
-            </ul>
-           
-            <div class="mt-5"></div>
-            <h3>
-                Olympiad Mock Tests
-            </h3>
-            <p class="text-muted mt-2">
-                Lorem Ipsum dolor sitor orem Ipsum dolor sitororem Ipsum dolor sitororem Ipsum dolor sitororem Ipsum dolor sitorore
+               Participate in all WeIntern National Olympiads & win scholarship worth ₹10 lakhs.
             </p>
             <div class="row">
-                <div class="col-md-2 p-4">
-                    <div class="card p-3 border border-secondary text-center">
-                      Mock Test 01
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="{{ url('purchases') }}" class="w-100">
+                            <div class="card border-primary border p-4">
+                                <div class="badge-primary-left">
+                                    Paid
+                                </div>
+                                <h3 class="text-primary mt-5">
+                                    WeIntern National Mathematics Olympiad (WNMO)
+                                </h3>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col-md-2 p-4">
-                    <div class="card p-3 border border-secondary text-center">
-                      Mock Test 02
+                    <div class="col-md-6">
+                        <a href="{{ url('purchases') }}" class="w-100">
+                            <div class="card border-primary border p-4">
+                                <div class="badge-primary-left">
+                                    Paid
+                                </div>
+                                <h3 class="mt-5">
+                                    WeIntern National Science Olympiad (WNSO)
+                                </h3>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col-md-2 p-4">
-                    <div class="card p-3 border border-secondary text-center">
-                      Mock Test 03
+                    <div class="col-md-6">
+                        <div class="card border-info border p-4">
+                            <div class="badge-info-left">
+                                Buy Now
+                            </div>
+                            <h3 class="text-primary mt-5">
+                                WeIntern National Science Olympiad (WNSO)
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-info border p-4">
+                            <div class="badge-info-left">
+                                Buy Now
+                            </div>
+                            <h3 class="mt-5">
+                                WeIntern National Cyber Olympiad (WNCO)
+                            </h3>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </section>
