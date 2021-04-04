@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Standard;
 use App\Models\Syllabus;
+use App\Models\User;
 use App\Models\Subject;
 use App\Models\StudentDetail;
 use Intervention\Image\ImageManagerStatic as Image;
@@ -87,13 +88,14 @@ class StudentController extends Controller
 			'id_front'      => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1048',
 			'id_back'       => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1048',
 		]);
+       $user = auth()->user();
+		
 
-		$user = auth()->user();
 	    $student = $user->student;
 
         if ($student) {
-          $student->standard     = $request->standard;
-          $student->school_name  = $request->school_name;
+          $student->standard       = $request->standard;
+          $student->school_name    = $request->school_name;
           $student->date_of_birth  = $request->dob;
           $student->save();
         }else{
@@ -126,7 +128,44 @@ class StudentController extends Controller
                 $student->save();
            }
         }
+
+        if ($student->id_front && $student->id_back) {
+          $user = auth()->user();
+          $user->status = User::UNDER_VERIFICATION;
+          $user->save();
+        }
 	    return redirect()->back()->with(["success" => "Updated Successfully"]);
 	}
+
+  public function deleteImage(Request $request, $type)
+  {
+    $user = auth()->user();
+    $student = $user->student;
+
+    if (!$student) {
+      return redirect()->back();
+    }
+
+    $filename = "";
+    if ($type == "id_front") {
+      $filename = $student->id_front;
+      $student->id_front = "";
+    }
+
+    if ($type == "id_back") {
+     $filename = $student->back;
+     $student->id_back = "";
+    }
+
+    if ($filename) {
+     $old_image = public_path('/uploads/id_proofs/' . $filename);
+     if (file_exists($old_image)) {
+       @unlink($old_image);
+     }
+    }
+
+    $student->save();
+    return redirect()->back();    
+  }
 
 }

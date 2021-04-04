@@ -78,11 +78,14 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="col-12 text-center mt-5 mb-2">
+                    <a href="{{ url('packages') }}" class="btn btn-primary w-25 ny-3 ">Buy Now </a>
+                </div>
             </div>
         </div>
     </div>
  
-
+   
  <div class="my-5">
      <div class="container">
          <header class="section-header">
@@ -119,6 +122,7 @@
                               <td>
                                 <h2 class="text-theme font-weight-bold">₹400/-</h2>
                                 <h3 class="header-3">For 1 Olympiad + 3 Mock Tests</h3>
+                                <a href="{{ url('packages') }}" class="text-theme underline">Buy Now</a>
                              </td>
                          </tr>
                          <tr>
@@ -126,6 +130,7 @@
                               <td>
                                 <h2 class="text-theme font-weight-bold">₹800/-</h2>
                                 <h3 class="header-3">For 4 Olympiad</h3>
+                                 <a href="{{ url('packages') }}" class="text-theme underline">Buy Now</a>
                              </td>
                          </tr>
                          <tr>
@@ -133,6 +138,7 @@
                              <td rowspan="2">
                                 <h2 class="text-theme font-weight-bold">₹1400/-</h2>
                                 <h3 class="header-3">For 4 Olympiad + 4 Mock Tests</h3>
+                                 <a href="{{ url('packages') }}" class="text-theme underline">Buy Now</a>
                              </td>
                          </tr>
                          <tr>

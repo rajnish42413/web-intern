@@ -87,5 +87,8 @@ Route::prefix('user')->name('user/')->group(static function() {
         Route::post('/update',                             'StudentController@update')->name('update');
         Route::get('/profile-verification',                'StudentController@verification')->name('verification');
         Route::post('/update/id-proof',                    'StudentController@updateIdProof')->name('id-proof');
+        Route::get('/id-proof/{image}',                   'StudentController@deleteImage')->name('id-proof-delete');
 });
+
+Route::get('packages', 'OrderController@packages');
 

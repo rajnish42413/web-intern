@@ -26,5 +26,6 @@
     <script src="/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="/admin/js/front.js"></script>
+    @yield('script')
   </body>
 </html>

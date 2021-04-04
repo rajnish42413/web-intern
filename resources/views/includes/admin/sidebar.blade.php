@@ -54,28 +54,28 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/purchases">
+                    <a href="/purchases" class="{{ request()->is('purchases') ? 'active' : '' }}">
                         <i class="fa fa-list-ol">
                         </i>
                         My Purchases
                     </a>
                 </li>
                 <li>
-                    <a href="/mock-tests">
+                    <a href="/mock-tests" class="{{ request()->is('mock-tests') ? 'active' : '' }}">
                         <i class="fa fa-file-text-o">
                         </i>
                         Mock Tests
                     </a>
                 </li>
                 <li>
-                    <a href="/olympiad-exam">
+                    <a href="/olympiad-exam" class="{{ request()->is('olympiad-exam') ? 'active' : '' }}">
                         <i class="fa fa-address-card-o">
                         </i>
                         Olympiad Exam
                     </a>
                 </li>
                 <li>
-                    <a href="/olympiad-exam-answer">
+                    <a href="/olympiad-exam-answer" class="{{ request()->is('olympiad-exam-answer') ? 'active' : '' }}">
                         <i class="fa fa-list-alt">
                         </i>
                         Olympiad Exam Answers

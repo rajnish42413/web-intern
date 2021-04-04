@@ -168,7 +168,7 @@
     @include('includes.about-us')
     @include('includes.testimonials')
 </main>
-@stop
+@endsection
 
 
 @section("script")
@@ -187,4 +187,4 @@
           });
       });
 </script>
-@stop
+@endsection

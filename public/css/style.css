@@ -13,8 +13,8 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: #717ff5;
-    text-decoration: none;
+    color: #000;
+    text-decoration: var(--primary-color);
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "Nunito", sans-serif;
@@ -721,8 +721,10 @@ section {
     font-style: normal;
     line-height: 1.23;
 }
-.btn-primary:hover {
-    background-color: var(--primary-color);
+.btn-primary:hover, .btn-primary:focus{
+    background-color: var(--primary-color) !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 .always-here {
     margin-top: -100px;
@@ -1424,4 +1426,68 @@ label, .label {
       font-size: 1.2em;
       width: 90%;
     }
+}
+
+
+/*checkbox*/
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+
+.container input:checked ~ .checkmark {
+  background-color: var(--primary-color);
+}
+
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

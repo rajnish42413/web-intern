@@ -5,11 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Olympiad extends Model
+class Package extends Model
 {
     use HasFactory;
 
     protected $guarded = ['id'];
+    protected $table = 'packages';
+
 
     protected $dates = [
 		'created_at',
@@ -17,14 +19,14 @@ class Olympiad extends Model
 	];
 
 
+	const OLYMPIAD                            = 0;
+	const OLYMPIAD_PLUS_MOCKTEST              = 1;
+	const ALL_OLYMPIAD                        = 2;
+	const ALL_OLYMPIAD_PLUS_MOCKTEST          = 3;
+
 	public function scopeActive($query)
     {
         return $query->where('status', 1);
-    }
-
-    public function packages()
-    {
-        return $this->hasMany(Package::class, 'product');
     }
 
 }

@@ -42,6 +42,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    const DOCUMENT_NOT_UPLOADED = 0;
+    const VERIFIED              = 1;
+    const REJECTED              = 2;
+    const UNDER_VERIFICATION    = 3;
+
 
     public function student()
     {
@@ -62,5 +67,25 @@ class User extends Authenticatable
        if ($user->student && $user->profile_photo)  $total++;
        if ($user->student && $user->student->date_of_birth)  $total++;
        return (int) round(($total / 7) * 100);
+    }
+
+    public function isVerified()
+    {
+        return $this->status === static::VERIFIED;
+    }
+
+    public function isUnderVerification()
+    {
+        return $this->status === static::UNDER_VERIFICATION;
+    }
+
+    public function isDocumnetNotUploaded()
+    {
+        return $this->status === static::DOCUMENT_NOT_UPLOADED;
+    }
+
+    public function isRejected()
+    {
+        return $this->status === static::REJECTED;
     }
 }

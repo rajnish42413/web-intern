@@ -5,26 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Olympiad extends Model
+class UserPackage extends Model
 {
     use HasFactory;
 
     protected $guarded = ['id'];
+    protected $table = 'user_packages';
 
     protected $dates = [
 		'created_at',
 		'updated_at'
 	];
-
-
-	public function scopeActive($query)
-    {
-        return $query->where('status', 1);
-    }
-
-    public function packages()
-    {
-        return $this->hasMany(Package::class, 'product');
-    }
 
 }

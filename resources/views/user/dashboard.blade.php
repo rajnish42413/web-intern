@@ -58,7 +58,7 @@
                     </div>
                     <div class="text-right">
                         <img height="auto" src="{{ asset('admin/icon/icon-01.svg') }}" width="46px">
-                            <a href="#">
+                            <a href="{{ url('olympiad-exam') }}">
                                 View More
                             </a>
                         </img>

@@ -15,7 +15,7 @@ class CreatePackagesTable extends Migration
     {
         Schema::create('packages', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('products');
+            $table->unsignedBigInteger('product');
             $table->string('name');
             $table->text('description')->nullable();
             $table->decimal('amount', 10, 2);

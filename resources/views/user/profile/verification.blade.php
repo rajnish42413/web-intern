@@ -33,16 +33,36 @@
                         <div class="text-center">
                           @if ($student && $student->profile_photo)
                             <img src="/uploads/profile_images/{{$student->profile_photo}}" class="profile-image rounded" width="140px" height="auto">
-                           @else
+                          @else
                             <img src='https://avataaars.io/?avatarStyle=Circle&topType=WinterHat4&accessoriesType=Blank&hatColor=Blue01&facialHairType=MoustacheMagnum&facialHairColor=Auburn&clotheType=GraphicShirt&clotheColor=Gray01&graphicType=Pizza&eyeType=Side&eyebrowType=DefaultNatural&mouthType=Sad&skinColor=Tanned'
                              class="profile-image rounded" width="140px" height="auto">                           
-                          @endif
+                           @endif
 
                              <h2 class="text-primary text-capitalize my-4">{{ $user->name }} </h2>
 
-                             <div class="alert alert-warning w-50 mx-auto">
-                               Upload your document to verify your account
+                             @if (auth()->user()->isVerified())
+                                <div class="alert alert-success w-50 mx-auto">
+                                 Your Documents Successfully Verified
+                               </div>
+                             @endif
+
+                             @if (auth()->user()->isUnderVerification())
+                                <div class="alert alert-warning w-50 mx-auto">
+                                  Please Wait Your Documents are Under Verfication
+                               </div>
+                             @endif
+
+                             @if (auth()->user()->isDocumnetNotUploaded())
+                               <div class="alert alert-warning w-50 mx-auto">
+                                  Upload your document to verify your account
+                               </div>
+                             @endif
+
+                             @if (auth()->user()->isRejected())
+                              <div class="alert alert-warning w-50 mx-auto">
+                                Your uploaded document is rejected by our admin. ReUpload, your document to verify your account.
                              </div>
+                             @endif
                         </div>
                        
                         <form action="{{ url('user/update/id-proof') }}" method="POST" enctype="multipart/form-data">
@@ -83,7 +103,7 @@
 
 
 
-                            <div class="row">
+                            <div class="row ">
                                 @if (!$student->id_front)
                                 <div class="col-md-6 my-3">
                                    <div class="card card-sec p-5 text-center">
@@ -100,6 +120,7 @@
                                 @else
                                 <div class="col-md-6">
                                  <img src="{{ asset('uploads/id_proofs/'.$student->id_front) }}" width="100%" height="auto" />
+                                 <a href="{{ url('user/id-proof/id_front') }}" class="my-3 text-danger text-right">Delete and ReUpload</a>
                                 </div>
                                 @endif
 
@@ -119,6 +140,7 @@
                                 @else
                                  <div class="col-md-6">
                                   <img src="{{ asset('uploads/id_proofs/'.$student->id_back) }}" width="100%" height="auto" />
+                                   <a href="{{ url('user/id-proof/id_back') }}" class="my-3 text-danger text-right">Delete and ReUpload</a>
                                  </div>
                                 @endif
                             </div>
