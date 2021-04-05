@@ -89,6 +89,15 @@ Route::prefix('user')->name('user/')->group(static function() {
         Route::post('/update/id-proof',                    'StudentController@updateIdProof')->name('id-proof');
         Route::get('/id-proof/{image}',                   'StudentController@deleteImage')->name('id-proof-delete');
 });
+ 
+Route::get('packages',        'OrderController@packages');
+Route::post('payment/status', 'OrderController@paymentCallback');
+Route::get('payment/status', 'OrderController@paymentStatus');
 
-Route::get('packages', 'OrderController@packages');
+Route::prefix('order')->name('order/')->group(static function() {
+        Route::post('/create',                            'OrderController@create')->name('create');
+        Route::post('/{order}/payment',                      'OrderController@payment')->name('payment');
+        Route::get('/{order}/checkout',                      'OrderController@checkout')->name('checkout');
+});
+
 

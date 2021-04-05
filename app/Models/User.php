@@ -6,6 +6,8 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Olympiad;
+use App\Models\Package;
 
 class User extends Authenticatable
 {
@@ -87,5 +89,24 @@ class User extends Authenticatable
     public function isRejected()
     {
         return $this->status === static::REJECTED;
+    }
+
+
+    public function assignProduct($product_id, $type, $expire_at)
+    {
+       $userPackage = UserPackage::where('user_id',$this->id)
+                                   ->where('product_id',$package_id)->first();
+      if ($userPackage) {
+         $userPackage->type = $type;
+         $userPackage->expire_at = $expire_at;
+         $userPackage->save();
+      }else{
+        UserPackage::create([
+            'user_id' => $this->id,
+            'product_id' => $product_id,
+            'expire_at' => $expire_at,
+        ]);
+      }
+      return true;
     }
 }

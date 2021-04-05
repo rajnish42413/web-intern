@@ -17,4 +17,7 @@ class UserPackage extends Model
 		'updated_at'
 	];
 
+	const ALLOWED_ONLY_OLYMPIAD = 0;
+	const ALLOWED_OLYMPIAD_AND_MOCKTEST = 1;
+
 }

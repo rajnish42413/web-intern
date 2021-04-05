@@ -75,7 +75,7 @@
 <div class="container py-4">
     <header class="section-header text-left w-75">
         <h2 class="text-left">
-            Checkout Now
+            WebInter All Packages
         </h2>
         <p class="text-left text-muted">
             Select the packages you want to buy and complete your payment with Debit/ Credit Card, UPI, Paytm etc.
@@ -154,7 +154,13 @@
                       </h3>
                       <span class="w-50 heading-3" >Rs <span id="totalAmount"></span></span>
                   </div>
-                  <button id="rzp-button1" class="btn btn-primary btn-block my-3">Pay</button>
+
+                 <form action="{{ route('order/create') }}" method="POST">
+                   @csrf
+                   <input type="hidden" name="amount" id="amount">
+                   <input type="hidden" name="package_ids" id="package_ids">
+                   <button class="btn btn-primary btn-block my-3" type="submit">Pay</button>
+                </form>
                 </div>
             </div>
         </div>
@@ -163,7 +169,6 @@
 @endsection
 
 @section('script')
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script type="text/javascript">
     const all = {!! $all_packages->toJSON() !!} ;
     var amount = 0;
@@ -220,58 +225,14 @@
         content += "</ul>";
         $("#added-packages").html(content);
         $("#totalAmount").html(totalAmount);
+        updateFormValue();
       }
 
-      function updateOrder(){
-
+      function updateFormValue(){
+         $("#amount").val(amount);
+         $("#package_ids").val(package_ids);
       }
 
       formShow();
-
-
-      const data = {
-      	name : "rajnish Singh",
-      	contact : "9876543210",
-      	email : "example@example.com",
-      }
-
-      var options = {
-          "key": "rzp_test_h8UmSy9FCwhLO7", 
-          "amount": 5000, 
-          "currency": "INR",
-          "name": "WebIntern",
-          "description": "Test Transaction",
-          "image": "https://example.com/your_logo",
-          "handler": function (response){
-              alert(response.razorpay_payment_id);
-              alert(response.razorpay_order_id);
-              alert(response.razorpay_signature)
-          },
-          "prefill": {
-              "name": data.name,
-              "email": data.email,
-              "contact": data.contact
-          },
-          "notes": {
-              "address": "Razorpay Corporate Office"
-          },
-          "theme": {
-              "color": "#3EAA6D"
-          }
-      };
-      var rzp1 = new Razorpay(options);
-      rzp1.on('payment.failed', function (response){
-              alert(response.error.code);
-              alert(response.error.description);
-              alert(response.error.source);
-              alert(response.error.step);
-              alert(response.error.reason);
-              alert(response.error.metadata.order_id);
-              alert(response.error.metadata.payment_id);
-      });
-      document.getElementById('rzp-button1').onclick = function(e){
-          rzp1.open();
-          e.preventDefault();
-      }
 </script>
 @endsection
