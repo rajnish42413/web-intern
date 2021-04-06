@@ -50,7 +50,7 @@
                 <div class="card">
                     <div>
                         <h2>
-                            00
+                            {{ $data['totalBuyed'] }}
                         </h2>
                         <h3>
                             My Olympiads
@@ -58,7 +58,7 @@
                     </div>
                     <div class="text-right">
                         <img height="auto" src="{{ asset('admin/icon/icon-01.svg') }}" width="46px">
-                            <a href="{{ url('olympiad-exam') }}">
+                            <a href="{{ route('user/exam') }}">
                                 View More
                             </a>
                         </img>
@@ -77,7 +77,7 @@
                     </div>
                     <div class="text-right">
                         <img height="auto" src="{{ asset('admin/icon/icon-01.svg') }}" width="46px">
-                            <a href="{{ url('purchases') }}">
+                            <a href="{{ url('user/edit') }}">
                                 View More
                             </a>
                         </img>
@@ -91,52 +91,35 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8">
-                <div class="row">
+               <div class="row">
+                   @foreach ($olympiads as $olympiad)
                     <div class="col-md-6">
-                        <a href="{{ url('purchases') }}" class="w-100">
-                            <div class="card border-primary border p-4">
-                                <div class="badge-primary-left">
-                                    Paid
-                                </div>
-                                <h3 class="text-primary mt-5">
-                                    WeIntern National Mathematics Olympiad (WNMO)
-                                </h3>
-                            </div>
-                        </a>
+                       @if (auth()->user()->isBuyedandNotExpired($olympiad->id)) 
+                           <a href="{{ route('user/purchase') }}" class="w-100">
+                               <div class="card border-primary border p-4">
+                                   <div class="badge-primary-left">
+                                       Paid
+                                   </div>
+                                   <h3 class="mt-5">
+                                      {{ $olympiad->full_name }} <br /> ({{ $olympiad->abbr }})
+                                   </h3>
+                               </div>
+                           </a>
+                       @else 
+                           <a href="{{ url('packages') }}" class="w-100" target="_blank">
+                               <div class="card border-info border p-4">
+                                  <div class="badge-info-left">
+                                      Buy Now
+                                  </div>
+                                   <h3 class="mt-5">
+                                      {{ $olympiad->full_name }} <br /> ({{ $olympiad->abbr }})
+                                   </h3>
+                               </div>
+                           </a>
+                       @endif
                     </div>
-                    <div class="col-md-6">
-                        <a href="{{ url('purchases') }}" class="w-100">
-                            <div class="card border-primary border p-4">
-                                <div class="badge-primary-left">
-                                    Paid
-                                </div>
-                                <h3 class="mt-5">
-                                    WeIntern National Science Olympiad (WNSO)
-                                </h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card border-info border p-4">
-                            <div class="badge-info-left">
-                                Buy Now
-                            </div>
-                            <h3 class="text-primary mt-5">
-                                WeIntern National Science Olympiad (WNSO)
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card border-info border p-4">
-                            <div class="badge-info-left">
-                                Buy Now
-                            </div>
-                            <h3 class="mt-5">
-                                WeIntern National Cyber Olympiad (WNCO)
-                            </h3>
-                        </div>
-                    </div>
-                </div>
+                   @endforeach
+               </div>
                 <div class="row">
                     <div class="col-md-12 mb-3">
                         <div class="card-dark p-4 mb-4 list-flex">
@@ -179,7 +162,7 @@
                         <p class="mb-4 text-muted text-center">
                             Practice now before olympiad
                         </p>
-                        <a class="btn btn-dark btn-lg" href="{{ url('mock-tests') }}">
+                        <a class="btn btn-dark btn-lg" href="{{ route('user/mock') }}">
                             Practice Now
                         </a>
                     </img>

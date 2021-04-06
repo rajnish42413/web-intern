@@ -34,33 +34,14 @@
                The Olympiad Exam will be conducted on the following dates:
             </p>
             <div class="row">
-                <div class="col-md-12">
-                    <div class="list-exam active">
-                        <div class="badge-info-right white">2nd June 2021</div>
-                        <h3>WeIntern National Mathematics Olympiad (WNMO)</h3>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="list-exam">
-                        <div class="badge-info-right">4th June 2021</div>
-                        <h3>WeIntern National English Olympiad (WNEO)</h3>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="list-exam">
-                        <div class="badge-info-right">6th June 2021</div>
-                        <h3>WeIntern National Science Olympiad (WNSO)</h3>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="list-exam">
-                        <div class="badge-info-right">8th June 2021</div>
-                        <h3>WeIntern National General Knowledge Olympiad (WNGKO)</h3>
-                    </div>
-                </div>
+                @foreach ($olympiads as $olympiad)
+                  <div class="col-md-12">
+                      <div class="list-exam @if (auth()->user()->isBuyedandNotExpired($olympiad->id)) active @endif">
+                          <div class="badge-info-right white">{{ \Carbon\Carbon::parse($olympiad->exam_at)->format('d-M-Y')}}</div>
+                          <h3>{{ $olympiad->full_name }} ({{ $olympiad->abbr }})</h3>
+                      </div>
+                  </div>
+                @endforeach
             </div>
         </div>
     </div>

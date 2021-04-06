@@ -95,7 +95,7 @@ class User extends Authenticatable
     public function assignProduct($product_id, $type, $expire_at)
     {
        $userPackage = UserPackage::where('user_id',$this->id)
-                                   ->where('product_id',$package_id)->first();
+                                   ->where('product_id',$product_id)->first();
       if ($userPackage) {
          $userPackage->type = $type;
          $userPackage->expire_at = $expire_at;
@@ -108,5 +108,12 @@ class User extends Authenticatable
         ]);
       }
       return true;
+    }
+
+    public function isBuyedandNotExpired($olympiad_id)
+    {
+      $up = UserPackage::find($olympiad_id);
+      if (!$up) return false;
+      return $up->isExpired();
     }
 }

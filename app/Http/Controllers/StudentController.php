@@ -6,16 +6,22 @@ use Illuminate\Http\Request;
 use App\Models\Standard;
 use App\Models\Syllabus;
 use App\Models\User;
+use App\Models\UserPackage;
 use App\Models\Subject;
 use App\Models\StudentDetail;
+use App\Models\Olympiad;
 use Intervention\Image\ImageManagerStatic as Image;
+use Carbon\Carbon;
 
 class StudentController extends Controller
 {
 
 	public function index()
 	{
-	   return view('user.dashboard');
+     $data = [];
+     $data["totalBuyed"] = UserPackage::where("status",1)->where("expire_at",">",Carbon::now())->count();
+     $olympiads = Olympiad::active()->get();
+	   return view('user.dashboard',compact('data','olympiads'));
 	}
 
 	public function verification()

@@ -7,6 +7,7 @@ use App\Models\Olympiad;
 use App\Models\Order;
 use App\Models\User;
 use App\Models\StudentDetail;
+use App\Models\UserPackage;
 use App\Models\Package;
 use Carbon\Carbon;
 use PaytmWallet;
@@ -35,7 +36,6 @@ class OrderController extends Controller
 			'package_ids' => 'required',
 			'amount' => 'required',
 		]);
-	    // $packages = explode(',', $request->package_ids);
 
    	 	$order = Order::create([
           'amount' => $request->amount,
@@ -61,6 +61,9 @@ class OrderController extends Controller
 			 $user = $this->createUser($request);
 		}
 
+		$order->user_id = $user->id;
+		$order->save();
+
         $payment = PaytmWallet::with('receive');
         $payment->prepare([
           'order' => $order->id,
@@ -68,18 +71,19 @@ class OrderController extends Controller
           'mobile_number' => $request->phone,
           'email' => $request->email,
           'amount' => $order->amount,
-          'callback_url' => url('payment/status')
+          'callback_url' => url('payment/callback')
         ]);
         return $payment->receive();
 	}
 
-	public function paymentCallback()
+	public function paymentCallback(Request $request)
 	{
 
-		return $request->all();
+		// $request->all();
 	    $transaction = PaytmWallet::with('receive');
 	    $response = $transaction->response();
 	    $order_id = $transaction->getOrderId();
+	    $order = Order::find($order_id);
 
 	    $data = [];
 
@@ -88,13 +92,23 @@ class OrderController extends Controller
 	      $data['status'] = "success";
 	      $data['transaction_id'] = $transaction->getTransactionId();
 	      $data['message'] = "Payment Successfully Paid.";
+	      $order->status = Order::PAID;
+	      $order->payment_response_id =  $transaction->getTransactionId();
+	      $order->payment_at =  Carbon::now();
+
 	    }else if($transaction->isFailed()){
+	      $order->status = Order::FAILED;
 	      $data['status'] = "error";
-	      $data['transaction_id'] = $transaction->getTransactionId();
-	      $data['message'] = "Payment Failed";
+	      $data['message'] = $response["RESPMSG"];
+	      
 	    }
 
-	    return view("order.status",compact('data'));
+	    $order->save();
+
+	    $isHideBack = true;
+	    $isHideFooter = true;
+
+	    return view("order.status",compact('data','isHideBack','isHideFooter'));
 	} 
 
 	protected function assignPackage($order)
@@ -104,7 +118,7 @@ class OrderController extends Controller
 		if (!$user) return;
 		if(!$user) return;
 
-		$packages = explode(',', $request->package_ids);
+		$packages = explode(',', $order->packages);
 		foreach ($packages as $p) {
 			$package = Package::find(trim($p));
 			if ($package && $package->type == Package::OLYMPIAD) {

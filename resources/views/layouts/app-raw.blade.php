@@ -16,6 +16,8 @@
         </meta>
     </head>
     <body>
+
+      @if (!isset($isHideBack))
         <div class="container py-4">
             <div class="row">
                 <div class="col-12">
@@ -56,9 +58,15 @@
                     </a>
                 </div>
             </div>
-        </div>
+         </div>
+       @endif
+
         @yield('content')
-        @include('includes.footer')
+
+        @if (!isset($isHideFooter))
+         @include('includes.footer')
+        @endif
+        
         <a class="back-to-top d-flex align-items-center justify-content-center" href="#">
             <i class="bi bi-arrow-up-short">
             </i>

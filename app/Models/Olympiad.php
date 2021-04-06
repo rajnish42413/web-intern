@@ -13,8 +13,12 @@ class Olympiad extends Model
 
     protected $dates = [
 		'created_at',
-		'updated_at'
+		'updated_at',
 	];
+
+    protected $casts = [
+        'exam_at' => 'date',
+    ];
 
 
 	public function scopeActive($query)

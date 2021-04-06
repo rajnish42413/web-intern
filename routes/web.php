@@ -29,7 +29,6 @@ Route::get('/ranking-criteria', function () {
     return view('ranking-criteria');
 });
 
-
 Route::get('/exam-information', function () {
     return view('exam-information');
 });
@@ -38,32 +37,6 @@ Route::get('/individual-register', function () {
     return view('individual-register');
 });
 
-
-Route::get('/user', function () {
-    return view('user/dashboard');
-});
-
-Route::get('/user/2', function () {
-    return view('user/dashboard-2');
-});
-
-Route::get('/purchases', function () {
-    return view('user/purchase');
-});
-
-Route::get('/mock-tests', function () {
-    return view('user/mock-tests');
-});
-
-Route::get('/mock-tests-2', function () {
-    return view('user/mock-tests-2');
-});
-Route::get('/olympiad-exam', function () {
-    return view('user/olympiad-exam');
-});
-Route::get('/olympiad-exam-answer', function () {
-    return view('user/olympiad-exam-answer');
-});
 Route::get('/awards-and-recognition', function () {
     return view('awards-and-recognition');
 });
@@ -83,15 +56,21 @@ Route::get('register/school', 'HomeController@registerSchool');
 Auth::routes();
 Route::prefix('user')->name('user/')->group(static function() {
         Route::get('/',                                    'StudentController@index')->name('home');
+        Route::get('/purchases',                           'UserController@purchase')->name('purchase');
+        Route::get('/mock-tests',                          'UserController@mock')->name('mock');
+        Route::get('/olympiad-exam',                       'UserController@exam')->name('exam');
+        Route::get('/olympiad-exam-answer',                'UserController@answer')->name('answer');
+
+
         Route::get('/edit',                                'StudentController@edit')->name('edit');
         Route::post('/update',                             'StudentController@update')->name('update');
         Route::get('/profile-verification',                'StudentController@verification')->name('verification');
         Route::post('/update/id-proof',                    'StudentController@updateIdProof')->name('id-proof');
-        Route::get('/id-proof/{image}',                   'StudentController@deleteImage')->name('id-proof-delete');
+        Route::get('/id-proof/{image}',                    'StudentController@deleteImage')->name('id-proof-delete');
 });
  
 Route::get('packages',        'OrderController@packages');
-Route::post('payment/status', 'OrderController@paymentCallback');
+Route::post('payment/callback', 'OrderController@paymentCallback');
 Route::get('payment/status', 'OrderController@paymentStatus');
 
 Route::prefix('order')->name('order/')->group(static function() {

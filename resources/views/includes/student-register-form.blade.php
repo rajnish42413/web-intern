@@ -10,7 +10,7 @@
             Fill the form and our representative will contact you within 24 working hours.
         </p>
     </header>
-    <form action="{{ route('order/update-user') }}" method="POST">
+    <form action="{{  route('register') }}" method="POST">
         @csrf
         <input name="type" type="hidden" value="student">
             <div class="form-group">

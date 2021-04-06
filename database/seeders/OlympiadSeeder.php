@@ -22,6 +22,7 @@ class OlympiadSeeder extends Seeder
               "full_name" => "WeIntern National Science Olympiad",
               "abbr" => "WNSO",
               'slug' =>   \Str::slug("WeIntern National Science Olympiad"),    
+              'exam_at' =>  "06-06-2021",    
             ]);
 
             Olympiad::create([
@@ -29,6 +30,7 @@ class OlympiadSeeder extends Seeder
               "full_name" => "WeIntern National Mathematics Olympiad",
               "abbr" => "WNMO",
               'slug' =>   \Str::slug("WeIntern National Mathematics Olympiad"),    
+              'exam_at' =>   "02-06-2021",    
             ]);
 
             Olympiad::create([
@@ -36,6 +38,7 @@ class OlympiadSeeder extends Seeder
               "full_name" => "WeIntern National English Olympiad",
               "abbr" => "WNEO",
               'slug' =>   \Str::slug("WeIntern National English Olympiad"),    
+              'exam_at' =>   "04-06-2021",    
             ]);
 
             Olympiad::create([
@@ -43,6 +46,7 @@ class OlympiadSeeder extends Seeder
               "full_name" => "WeIntern National General Knowledge Olympiad",
               "abbr" => "WNGNO",
               'slug' =>   \Str::slug("WeIntern National General Knowledge Olympiad"),    
+              'exam_at' =>   "08-06-2021",    
             ]);
     }
 

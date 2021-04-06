@@ -17,6 +17,10 @@ class Order extends Model
 		'updated_at'
 	];
 
+    const PAID = 1;
+    const UNPAID = 0;
+    const FAILED = 2;
+
 	public function user()
     {
         return $this->belongsTo(User::class);

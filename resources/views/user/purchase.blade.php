@@ -36,50 +36,33 @@
             <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-6">
-                        <a href="{{ url('purchases') }}" class="w-100">
-                            <div class="card border-primary border p-4">
-                                <div class="badge-primary-left">
-                                    Paid
+                    @foreach ($olympiads as $olympiad)
+                     <div class="col-md-6">
+                        @if (auth()->user()->isBuyedandNotExpired($olympiad->id)) 
+                            <a href="{{ route('user/purchase') }}" class="w-100">
+                                <div class="card border-primary border p-4">
+                                    <div class="badge-primary-left">
+                                        Paid
+                                    </div>
+                                    <h3 class="mt-5">
+                                       {{ $olympiad->full_name }} ({{ $olympiad->abbr }})
+                                    </h3>
                                 </div>
-                                <h3 class="text-primary mt-5">
-                                    WeIntern National Mathematics Olympiad (WNMO)
-                                </h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="{{ url('purchases') }}" class="w-100">
-                            <div class="card border-primary border p-4">
-                                <div class="badge-primary-left">
-                                    Paid
+                            </a>
+                        @else 
+                            <a href="{{ url('packages') }}" class="w-100" target="_blank">
+                                <div class="card border-info border p-4">
+                                   <div class="badge-info-left">
+                                       Buy Now
+                                   </div>
+                                    <h3 class="mt-5">
+                                       {{ $olympiad->full_name }} ({{ $olympiad->abbr }})
+                                    </h3>
                                 </div>
-                                <h3 class="mt-5">
-                                    WeIntern National Science Olympiad (WNSO)
-                                </h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card border-info border p-4">
-                            <div class="badge-info-left">
-                                Buy Now
-                            </div>
-                            <h3 class="text-primary mt-5">
-                                WeIntern National Science Olympiad (WNSO)
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card border-info border p-4">
-                            <div class="badge-info-left">
-                                Buy Now
-                            </div>
-                            <h3 class="mt-5">
-                                WeIntern National Cyber Olympiad (WNCO)
-                            </h3>
-                        </div>
-                    </div>
+                            </a>
+                        @endif
+                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>

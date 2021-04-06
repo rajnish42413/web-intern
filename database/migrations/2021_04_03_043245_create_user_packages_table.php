@@ -15,6 +15,7 @@ class CreateUserPackagesTable extends Migration
     {
         Schema::create('user_packages', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id')->unsigned();
             $table->unsignedBigInteger('product_id')->nullable();
             $table->tinyInteger('type')->default(0);
             $table->datetime('expire_at');
