@@ -20,7 +20,7 @@ class CreateOlympiadsTable extends Migration
             $table->string('abbr')->nullable();
             $table->string('slug')->unique();
             $table->tinyInteger('status')->default(1);
-            $table->data('exam_at')->nullable();
+            $table->date('exam_at')->nullable();
             $table->timestamps();
         });
     }
