@@ -10,11 +10,11 @@
                     WeIntern Summer Olympiad 2021
                 </h1>
                 <h2 data-aos="fade-up" data-aos-delay="400">
-                    WeIntern Summer Olympiad will be India’s 1st Summer Olympiad for classes 2nd to 11th. The olympiad will be
+                    WeIntern Summer Olympiad will be India’s 1st Summer Olympiad for classes 2nd to 12th.
                 </h2>
                 <div>
-                    <a class="btn-get-started" data-aos="fade-up" data-aos-delay="500" href="{{ url('register/student') }}">
-                        Sign Up Now
+                    <a class="btn-get-started" data-aos="fade-up" data-aos-delay="500" href="{{ url('packages') }}">
+                        Apply Now
                     </a>
                 </div>
             </div>
@@ -165,7 +165,7 @@
         </div>
     </section>
     @include('includes.qa')
-    @include('includes.about-us')
+    {{-- @include('includes.about-us') --}}
     @include('includes.testimonials')
 </main>
 @endsection

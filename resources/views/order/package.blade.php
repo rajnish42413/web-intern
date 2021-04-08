@@ -87,11 +87,16 @@
                 Packages
             </h3>
             @foreach ($packages as $package)
+            @php
+              $all_type = $package->type == 2 ? 'all-olympiad' :  'all-olympiad-mock';
+              // $all_type = $package->type == 2 ? 'all-olympiad-'.$package->id :  'all-olympiad-mock-'$package->id;
+            @endphp 
             <ul class="packages-list">
                 <li class="primary">
                     <label class="checkbox-container">
                         {{ $package->name}}
-                        <input name="package_id" type="checkbox" value="{{ $package->id}}" class="multi_packages" onclick="handleAddPackage('multi')">
+                        <input name="package_id" type="checkbox" value="{{ $package->id}}"
+                          class="multi_packages {{ $all_type }} package-{{ $package->id }}" onclick="handleAddPackage('multi')">
                             <span class="checkmark">
                             </span>
                         </input>
@@ -112,13 +117,17 @@
                 </h3>
                 <ul class="packages-list">
                     @foreach ($olympiad->packages as $package)
+                    @php
+                      $sn_type = $package->type == 0 ? 'olympiad' :  'olympiad-mock';
+                      $s_type = $package->type == 0 ? "olympiad-{$olympiad->id}" :  "olympiad-mock-{$olympiad->id}";
+                    @endphp 
                     <li>
                         <label class="checkbox-container">
                             {{ $package->name}}
-                            <input name="package_id" type="checkbox" value="{{ $package->id}}" class="single_packages" onclick="handleAddPackage('single')">
-                                <span class="checkmark">
-                                </span>
-                            </input>
+                             <input name="package_id" type="checkbox" value="{{ $package->id}}" class="single_packages {{ $s_type }} package-{{ $package->id }}" 
+                             onclick="handleAddPackage('single')">
+                                <span class="checkmark"></span>
+                             </input>
                         </label>
                         <span class="heading-2">
                             Rs {{ $package->amount}}
@@ -169,12 +178,15 @@
 @endsection
 
 @section('script')
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script type="text/javascript">
     const all = {!! $all_packages->toJSON() !!} ;
+    const totalOlympiad = {!! $olympiads->count() !!};
     var amount = 0;
     var package_ids = [];
     $notFilledForm = $("#checkout-packages-not-filled-form");
     $filledForm = $("#checkout-packages-form");
+    var selectedPackages = [];
 
     function handlePackagesType(type){
        if(type == "multi") {
@@ -191,6 +203,32 @@
        }
     }
 
+    function handleSelectedPackages() {
+      selectedPackages.map(package =>  validatePackage(package));
+    }
+
+    function validatePackage(package) {
+       if(package.type == 0){
+          $(`.olympiad-${package.product}`).attr("disabled", false);
+          $(`.olympiad-mock-${package.product}`).attr("disabled", true);
+       }
+
+       if(package.type == 1){
+          $(`.olympiad-${package.product}`).attr("disabled", true);
+          $(`.olympiad-mock-${package.product}`).attr("disabled", false);
+       }
+
+       if(package.type == 2){
+          $('.all-olympiad').attr("disabled", false);
+          $('.all-olympiad-mock').attr("disabled", true);
+       }
+
+       if(package.type == 3){
+          $('.all-olympiad').attr("disabled", true);
+          $('.all-olympiad-mock').attr("disabled", false);
+       }
+    }
+
  	function formShow(){
      if(package_ids.length > 0){
         $notFilledForm.addClass("d-none");
@@ -201,38 +239,55 @@
       }
  	}
 
- 	function handleAddPackage(type){
- 	  handlePackagesType(type);
+  function resetChecked() {
+    $("input[name=package_id]").prop('checked', false);
+    package_ids.map(id => 
+     $(`.package-${id}`).prop('checked', true)
+    )
+  }
+
+ 	function handleAddPackage(type){ 
       package_ids = $("input[name=package_id]:checked").map(function() {
         return $(this).val();
       }).get();
-      renderAllPcakges();
-      formShow();
+
+      const checkAll = package_ids.filter(f => f > 0);
+       if(checkAll.length > 3){
+         Swal.fire('Warning','You can select combined package!','info');
+         $(this).prop('checked', false);
+         package_ids.pop();
+         resetChecked();
+         return;
+       }
       handlePackagesType(type);
+      renderAllPackges();
+      formShow();
+      handleSelectedPackages();
  	}
 
-      function renderAllPcakges(){
-        let content = "<ul>";
-        let totalAmount = 0;
-        package_ids.map(p => {
-            const package = all.find(i => i.id == p);
-            if(package) {
-             totalAmount += +package.amount;
-             amount = +totalAmount;
-             content += '<li class="ch-item"><h3>'+ package.description +'</h3><span>Rs '+ package.amount +'</span></li>';  
-            } 
-        });
-        content += "</ul>";
-        $("#added-packages").html(content);
-        $("#totalAmount").html(totalAmount);
-        updateFormValue();
-      }
+  function renderAllPackges(){
+    let content = "<ul>";
+    let totalAmount = 0;
+    package_ids.map(p => {
+        const package = all.find(i => i.id == p);
+        if(package) {
+         selectedPackages.push(package);
+         totalAmount += +package.amount;
+         amount = +totalAmount;
+         content += '<li class="ch-item"><h3>'+ package.description +'</h3><span>Rs '+ package.amount +'</span></li>';  
+        } 
+    });
+    content += "</ul>";
+    $("#added-packages").html(content);
+    $("#totalAmount").html(totalAmount);
+    updateFormValue();
+  }
 
-      function updateFormValue(){
-         $("#amount").val(amount);
-         $("#package_ids").val(package_ids);
-      }
+  function updateFormValue(){
+     $("#amount").val(amount);
+     $("#package_ids").val(package_ids);
+  }
 
-      formShow();
+  formShow();
 </script>
 @endsection

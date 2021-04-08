@@ -34,18 +34,17 @@
                 Lorem Ipsum dolor sitor orem Ipsum dolor sitororem Ipsum dolor sitororem Ipsum dolor sitororem Ipsum dolor sitorore
             </p>
             <ul class="list-order">
-                <li class="list-item active" buyed="true">
-                    WeIntern National Mathematics Olympiad (WNMO)
-                </li>
-                <li class="list-item" buyed="true">
-                    WeIntern National English Olympiad (WNEO)
-                </li>
-                <li class="list-item" buyed="true">
-                    WeIntern National Science Olympiad (WNSO)
-                </li>
-                <li class="list-item" buyed="false">
-                    WeIntern National General Knowledge Olympiad (WNGKO)
-                </li>
+               @foreach ($olympiads as $olympiad)
+                  {{-- <div class="col-md-12">
+                      <div class="list-exam @if (auth()->user()->isBuyedandNotExpired($olympiad->id)) active @endif">
+                          <div class="badge-info-right white">{{ \Carbon\Carbon::parse($olympiad->exam_at)->format('d-M-Y')}}</div>
+                          <h3>{{ $olympiad->full_name }} ({{ $olympiad->abbr }})</h3>
+                      </div>
+                  </div> --}}
+                  <li class="list-item active" buyed="@if (auth()->user()->isBuyedandNotExpired($olympiad->id)) true @else false @endif">
+                    {{ $olympiad->full_name }} ({{ $olympiad->abbr }})
+                  </li>
+                @endforeach
             </ul>
            
             <div class="mt-5"></div>
@@ -53,7 +52,7 @@
                 Take Mock Test
             </h3>
             <p class="text-muted mt-2" id="mock-text-subheading">
-                Lorem Ipsum dolor sitor orem Ipsum dolor sitororem Ipsum dolor sitororem Ipsum dolor sitororem Ipsum dolor sitorore
+                
             </p>
             <div class="row" id="mock-test-content">
                 <div class="col-md-2 p-4">

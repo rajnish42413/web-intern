@@ -50,6 +50,7 @@
          <h2 class="text-center">
             Payment Successfully Completed
         </h2>
+        <p>Thank You for buying WeIntern Olympiad Package! <br /> You will receive the dashboard login credentials by May 1, 2021. <br /> All the Best!</p>
         @endif
 
          @if ($data['status'] == "error")

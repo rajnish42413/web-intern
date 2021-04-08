@@ -12,8 +12,9 @@ class HomeController extends Controller
 
 	public function index()
 	{
-
-	   return view('user.dashboard');
+      $subjects = Subject::where('abbr','!=','WNGNO')->orderBy('name')->groupBy('name')->get();
+      $standards =Standard::all();
+      return view('syllabus', compact('subjects','standards'));
 	}
 
    public function registerStudent()

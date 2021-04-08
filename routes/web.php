@@ -46,8 +46,8 @@ Route::get('/benefits-for-schools', function () {
 
 
 
-
 Route::get('syllabus', 'HomeController@index');
+
 Route::get('syllabus/{standard}', 'HomeController@syllabus')->name('syllabus.class');
 Route::get('register/student', 'HomeController@registerStudent');
 Route::get('register/school', 'HomeController@registerSchool');

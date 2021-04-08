@@ -19,7 +19,9 @@ class StudentController extends Controller
 	public function index()
 	{
      $data = [];
-     $data["totalBuyed"] = UserPackage::where("status",1)->where("expire_at",">",Carbon::now())->count();
+     $user = auth()->user();
+     $user->packages;
+     $data["totalBuyed"] = $user->packages ? $user->packages()->where("status",1)->where("expire_at",">",Carbon::now())->count() : 0;
      $olympiads = Olympiad::active()->get();
 	   return view('user.dashboard',compact('data','olympiads'));
 	}

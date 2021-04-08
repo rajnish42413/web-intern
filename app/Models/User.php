@@ -116,4 +116,9 @@ class User extends Authenticatable
       if (!$up) return false;
       return $up->isExpired();
     }
+
+    public function packages()
+    {
+       return $this->hasMany(UserPackage::class);
+    }
 }

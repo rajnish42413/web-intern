@@ -161,33 +161,15 @@
                     <ul class="award-list mt-4">
                         <li>
                           <div class="award-icon"><img src="{{ url('img/home/award.svg') }}" /><span>1</span></div>
-                          <h3>Rs 50000 + Scholar trophies + <br />Sedal of excellence + Serit certificate</h3>
+                          <h3>Rs 25000 + Scholar trophies + <br />medal of excellence + merit certificate</h3>
                        </li> 
                        <li>
                           <div class="award-icon"><img src="{{ url('img/home/award.svg') }}" /><span>2</span></div>
                           <h3>Rs 10000 + scholar trophies + <br /> medal of excellence + merit certificate</h3>
                        </li>
                        <li>
-                          <div class="award-icon"><img src="{{ url('img/home/award.svg') }}" /><span>3 - 5</span></div>
+                          <div class="award-icon"><img src="{{ url('img/home/award.svg') }}" /><span>3</span></div>
                           <h3>Rs 5000 + scholar trophies +<br /> medal of excellence + merit certificate</h3>
-                       </li>
-                       <li>
-                          <div class="award-icon"><img src="{{ url('img/home/award.svg') }}" /><span>6 - 10</span></div>
-                          <h3>Rs 2000 + scholar trophies + <br /> medal of excellence + merit certificate</h3>
-                       </li>
-                       <li>
-                          <div class="award-icon"><img src="{{ url('img/home/award.svg') }}" /><span>10 - 25</span></div>
-                          <h3>Rs 1000 + scholar trophies + <br /> medal of excellence + merit certificate</h3>
-                       </li>
-
-                       <li>
-                          <div class="award-icon"><img src="{{ url('img/home/award.svg') }}" /><span>26 - 50</span></div>
-                          <h3>Rs 500 + scholar trophies + <br /> medal of excellence + merit certificate</h3>
-                       </li>
-
-                       <li>
-                          <div class="award-icon"><img src="{{ url('img/home/award.svg') }}" /><span>51 - 100</span></div>
-                          <h3>medal of excellence + <br/> merit certificate State Level Prize List </h3>
                        </li>
                     </ul>
                 </div>
@@ -195,7 +177,7 @@
         </div>
     </div>
  
-    @include('includes.about-us')
+    {{-- @include('includes.about-us') --}}
     @include('includes.testimonials')
 </main>
 @stop

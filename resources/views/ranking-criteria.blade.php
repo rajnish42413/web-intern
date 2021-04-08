@@ -47,7 +47,7 @@
                         <i class="ri-star-fill mr-2 text-warning">
                         </i>
                         <p class="heading-2 mt-0 ">
-                            There will be total 45 questions in each olympiad.
+                            There will be total 30 questions in each olympiad.
                         </p>
                     </div>
                     <div class="star-point">
@@ -105,7 +105,7 @@
                 <div class="col-md-3">
                     <div class="card p-3">
                         <h1>
-                            45
+                           30
                         </h1>
                         <p>
                             Questions

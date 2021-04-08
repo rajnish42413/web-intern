@@ -227,7 +227,7 @@
         </div>
     </div>
  
-    @include('includes.about-us')
+    {{-- @include('includes.about-us') --}}
     @include('includes.testimonials')
 </main>
 @stop

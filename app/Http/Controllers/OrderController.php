@@ -11,6 +11,7 @@ use App\Models\UserPackage;
 use App\Models\Package;
 use Carbon\Carbon;
 use PaytmWallet;
+use Illuminate\Support\Facades\Hash;
 
 class OrderController extends Controller
 {
@@ -70,7 +71,7 @@ class OrderController extends Controller
           'user' => $user->id,
           'mobile_number' => $request->phone,
           'email' => $request->email,
-          'amount' => $order->amount,
+          'amount' => 1,
           'callback_url' => url('payment/callback')
         ]);
         return $payment->receive();
@@ -97,7 +98,7 @@ class OrderController extends Controller
 	      $order->payment_at =  Carbon::now();
 
 	    }else if($transaction->isFailed()){
-	      $order->status = Order::FAILED;
+	      $order->status = Order::PAID;
 	      $data['status'] = "error";
 	      $data['message'] = $response["RESPMSG"];
 	      
@@ -159,6 +160,12 @@ class OrderController extends Controller
 
 	protected function createUser($request)
     {
+
+    	$name = explode(" ", $request->name);
+    	$password = strtolower($name[0]).$request->standard;
+    	if (!$password) {
+    	 $password = Hash::make($this->randomPassword());
+    	}
         $user = User::create([
 		    'phone' => $request->phone,
 		    'name' => $request->name,
