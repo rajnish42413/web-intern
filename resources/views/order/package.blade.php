@@ -68,6 +68,9 @@
 	color: #000;
 	font-weight: bolder;
 }
+#package-all, #package-single{
+  display: none;
+}
 </style>
 @endsection
 
@@ -83,7 +86,8 @@
     </header>
     <div class="row">
         <div class="col-md-7" id="packages">
-            <h3 class="heading-3 mb-3">
+            <div id="package-all">
+              <h3 class="heading-3 mb-3">
                 Packages
             </h3>
             @foreach ($packages as $package)
@@ -91,7 +95,7 @@
               $all_type = $package->type == 2 ? 'all-olympiad' :  'all-olympiad-mock';
               // $all_type = $package->type == 2 ? 'all-olympiad-'.$package->id :  'all-olympiad-mock-'$package->id;
             @endphp 
-            <ul class="packages-list">
+            <ul class="packages-list" >
                 <li class="primary">
                     <label class="checkbox-container">
                         {{ $package->name}}
@@ -107,7 +111,10 @@
                 </li>
             </ul>
             @endforeach
-            <h3 class="heading-3 mb-3 mt-5">
+          </div>
+           
+            <div id="package-single">
+               <h3 class="heading-3 mb-3 mt-5">
                 Single Olympiads
             </h3>
             @foreach ($olympiads as $olympiad)
@@ -115,7 +122,7 @@
                 <h3 class="heading-3 text-theme pl-3">
                     {{ $olympiad->full_name }} ({{$olympiad->abbr}})
                 </h3>
-                <ul class="packages-list">
+                <ul class="packages-list" >
                     @foreach ($olympiad->packages as $package)
                     @php
                       $sn_type = $package->type == 0 ? 'olympiad' :  'olympiad-mock';
@@ -137,6 +144,7 @@
                 </ul>
             </div>
             @endforeach
+          </div>
         </div>
         <div class="col-md-5">
             {{-- //not selected any Item --}}
@@ -169,6 +177,7 @@
                    <input type="hidden" name="amount" id="amount">
                    <input type="hidden" name="package_ids" id="package_ids">
                    <button class="btn btn-primary btn-block my-3" type="submit">Pay</button>
+                   <button class="btn btn-link btn-block my-3" type="button" onclick="resetAll()">Reset selection</button>
                 </form>
                 </div>
             </div>
@@ -180,6 +189,12 @@
 @section('script')
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script type="text/javascript">
+
+    window.onload = function() {
+           $('#package-all').css('display','block');
+           $('#package-single').css('display','block')     
+     };
+
     const all = {!! $all_packages->toJSON() !!} ;
     const totalOlympiad = {!! $olympiads->count() !!};
     var amount = 0;
@@ -190,16 +205,16 @@
 
     function handlePackagesType(type){
        if(type == "multi") {
-       	 $('.multi_packages').attr("disabled", false);
-       	 $('.single_packages').attr("disabled", true);
+       	 $('#package-all').css('display','block');
+         $('#package-single').css('display','none');
        }else{
-       	$('.single_packages').attr("disabled", false);
-       	$('.multi_packages').attr("disabled", true);
+       	 $('#package-all').css('display','none');
+         $('#package-single').css('display','block');
        }
 
        if(package_ids.length <= 0){
-       	 $('.single_packages').attr("disabled", false);
-       	 $('.multi_packages').attr("disabled", false);
+       	 $('#package-all').css('display','block');
+         $('#package-single').css('display','block');
        }
     }
 
@@ -208,6 +223,8 @@
     }
 
     function validatePackage(package) {
+      $('.single_packages').attr("disabled", false);
+
        if(package.type == 0){
           $(`.olympiad-${package.product}`).attr("disabled", false);
           $(`.olympiad-mock-${package.product}`).attr("disabled", true);
@@ -239,7 +256,12 @@
       }
  	}
 
-  function resetChecked() {
+  function resetAll() {
+    location.reload();
+  }
+
+  function resetChecked(type) {
+    handlePackagesType(type);
     $("input[name=package_id]").prop('checked', false);
     package_ids.map(id => 
      $(`.package-${id}`).prop('checked', true)
@@ -253,10 +275,10 @@
 
       const checkAll = package_ids.filter(f => f > 0);
        if(checkAll.length > 3){
-         Swal.fire('Warning','You can select combined package!','info');
+         Swal.fire('Warning','You can select combined package! (you can reset your selection by using reset button)','info');
          $(this).prop('checked', false);
          package_ids.pop();
-         resetChecked();
+         resetChecked(type);
          return;
        }
       handlePackagesType(type);
