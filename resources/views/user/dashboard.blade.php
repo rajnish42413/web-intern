@@ -131,7 +131,7 @@
                                     Kindly update your profile to complete the registration process
                                 </p>
                             </div>
-                            <a class="btn btn-primary text-right" href="{{ url('user/edit') }}">
+                            <a class="btn btn-primary" href="{{ url('user/edit') }}">
                                 Update Now
                             </a>
                         </div>
@@ -146,7 +146,7 @@
                                     Kindly complete your verification to be eligible for the Olympiads
                                 </p>
                             </div>
-                            <a class="btn btn-primary text-right" href="{{ url('user/profile-verification') }}">
+                            <a class="btn btn-primary" href="{{ url('user/profile-verification') }}">
                                 Verify Now
                             </a>
                         </div>

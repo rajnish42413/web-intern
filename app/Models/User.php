@@ -112,7 +112,8 @@ class User extends Authenticatable
 
     public function isBuyedandNotExpired($olympiad_id)
     {
-      $up = UserPackage::find($olympiad_id);
+      $packages = $this->packages;
+      $up = $this->packages()->where('product_id',$olympiad_id)->first();
       if (!$up) return false;
       return $up->isExpired();
     }

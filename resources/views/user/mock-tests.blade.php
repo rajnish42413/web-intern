@@ -30,18 +30,24 @@
             <h3>
                 Select Your Olympiad
             </h3>
-            <p class="text-muted mt-2">
+            {{-- <p class="text-muted mt-2">
                 Lorem Ipsum dolor sitor orem Ipsum dolor sitororem Ipsum dolor sitororem Ipsum dolor sitororem Ipsum dolor sitorore
-            </p>
+            </p> --}}
             <ul class="list-order">
                @foreach ($olympiads as $olympiad)
+               @php
+                 $active = false;
+                   if (auth()->user()->isBuyedandNotExpired($olympiad->id)){
+                    $active = true;
+                  }
+               @endphp
                   {{-- <div class="col-md-12">
                       <div class="list-exam @if (auth()->user()->isBuyedandNotExpired($olympiad->id)) active @endif">
                           <div class="badge-info-right white">{{ \Carbon\Carbon::parse($olympiad->exam_at)->format('d-M-Y')}}</div>
                           <h3>{{ $olympiad->full_name }} ({{ $olympiad->abbr }})</h3>
                       </div>
                   </div> --}}
-                  <li class="list-item active" buyed="@if (auth()->user()->isBuyedandNotExpired($olympiad->id)) true @else false @endif">
+                  <li class="list-item @if ($active) active @endif" buyed="@if ($active) true @else false @endif">
                     {{ $olympiad->full_name }} ({{ $olympiad->abbr }})
                   </li>
                 @endforeach
@@ -54,18 +60,18 @@
             <p class="text-muted mt-2" id="mock-text-subheading">
                 
             </p>
-            <div class="row" id="mock-test-content">
-                <div class="col-md-2 p-4">
+            <div class="row mt-2" id="mock-test-content">
+                <div class="col-md-2">
                     <div class="card p-3 border border-secondary text-center">
                       Mock Test 01
                     </div>
                 </div>
-                <div class="col-md-2 p-4">
+                <div class="col-md-2">
                     <div class="card p-3 border border-secondary text-center">
                       Mock Test 02
                     </div>
                 </div>
-                <div class="col-md-2 p-4">
+                <div class="col-md-2">
                     <div class="card p-3 border border-secondary text-center">
                       Mock Test 03
                     </div>
@@ -76,7 +82,7 @@
                     <div class=" bg-gray p-5">
                      <h3 class="mb-4">Personalize your preparation by buying our <br />
                         official Mock Test Package</h3>
-                     <button class="btn btn-primary">Buy Now</button>
+                     <a class="btn btn-primary" href="{{ url('packages') }}">Buy Now</a>
                    </div>
                 </div>
             </div>
@@ -101,7 +107,7 @@
 
       $('.list-item').click(function(){
          $isBuyed = $(this).attr('buyed');
-          if($isBuyed == 'false'){
+          if($isBuyed.trim() == 'false'){
              $mockTextContent.addClass("d-none");
              $buyNow.removeClass("d-none");
           }else {
@@ -112,8 +118,6 @@
           $(this).addClass("active");
           setSubHeading($(this).text());
       });
-
       setSubHeading("WeIntern National Mathematics Olympiad (WNMO)");
-
  </script>
 @endsection

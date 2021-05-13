@@ -853,7 +853,7 @@ nav.navbar a.menu-btn:hover {
 /* DASHBOARD COUNTS MEDIAQUERIES ------------------------- */
 @media (max-width: 991px) {
   .dashboard-counts div[class*='col-'] {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -3281,6 +3281,7 @@ a > code {
   padding: 8px 27px 7.3px 14.9px;
   background-color: #3eaa6d;
   color: #fff;
+  min-height: 39px;
 } 
 
 .badge-primary-left:after{
@@ -3302,6 +3303,7 @@ a > code {
   padding: 8px 27px 7.3px 14.9px;
   background-color: #c3d0e2;
   color: #000000;
+  min-height: 39px;
 } 
 
 .badge-info-left:after{
@@ -3409,6 +3411,7 @@ a > code {
   padding: 8px 27px 7.3px 14.9px;
   background-color: #3eaa6d;
   color: #fff;
+  min-height: 39px;
 } 
 
 .badge-info-right.white{
@@ -3450,3 +3453,31 @@ a > code {
       font-size: 34px;
       font-weight: 900;
   }
+
+  .w-md-50{
+    width: 50%;
+  }
+
+
+@media (max-width: 768px) {
+  .card{
+    font-size: 0.9em;
+  }
+  .list-order li{
+    width: 100%;
+    margin:0.7rem 0;
+    padding: 1rem;
+    font-size: 0.9em;
+  }
+  .w-md-50{
+    width: 100%;
+  }
+  .list-exam{
+    padding: 1.2rem;
+    font-size: 0.9em;
+  }
+  .list-exam h3{
+    margin-top: 60px;
+  }
+}
+

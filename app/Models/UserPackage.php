@@ -47,12 +47,5 @@ class UserPackage extends Model
      	return $this->type == static::ALLOWED_OLYMPIAD_AND_MOCKTEST;
     } 
 
-    public function isBuyedandNotExpired($olympiad_id)
-    {
-    	$up = UserPackage::find($olympiad_id);
-    	if (!$up) return false;
-    	return $up->isExpired();
-    }
-
 }
 

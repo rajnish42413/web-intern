@@ -41,25 +41,25 @@
                              <h2 class="text-primary text-capitalize my-4">{{ $user->name }} </h2>
 
                              @if (auth()->user()->isVerified())
-                                <div class="alert alert-success w-50 mx-auto">
+                                <div class="alert alert-success w-md-50 mx-auto">
                                  Your Documents Successfully Verified
                                </div>
                              @endif
 
                              @if (auth()->user()->isUnderVerification())
-                                <div class="alert alert-warning w-50 mx-auto">
+                                <div class="alert alert-warning w-md-50 mx-auto">
                                   Please Wait Your Documents are Under Verfication
                                </div>
                              @endif
 
                              @if (auth()->user()->isDocumnetNotUploaded())
-                               <div class="alert alert-warning w-50 mx-auto">
+                               <div class="alert alert-warning w-md-50 mx-auto">
                                   Upload your document to verify your account
                                </div>
                              @endif
 
                              @if (auth()->user()->isRejected())
-                              <div class="alert alert-warning w-50 mx-auto">
+                              <div class="alert alert-warning w-md-50 mx-auto">
                                 Your uploaded document is rejected by our admin. ReUpload, your document to verify your account.
                              </div>
                              @endif

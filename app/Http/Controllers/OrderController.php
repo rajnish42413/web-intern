@@ -133,14 +133,14 @@ class OrderController extends Controller
 			if ($package && $package->type == Package::ALL_OLYMPIAD) {
 			  $all_o = Olympiad::where('status',1)->get();
 			  foreach ($all_o as $o) {
-			    $user->assignProduct($o->id, UserPackage::ALLOWED_ONLY_OLYMPIAD, $package->expire_at);
+			    $user->assignProduct($package->product, UserPackage::ALLOWED_ONLY_OLYMPIAD, $package->expire_at);
 			  }
 			}
 
 			if ($package && $package->type == Package::ALL_OLYMPIAD_PLUS_MOCKTEST) {
 			  $all_o = Olympiad::where('status',1)->get();
 			  foreach ($all_o as $o) {
-			    $user->assignProduct($o->id, UserPackage::ALLOWED_OLYMPIAD_AND_MOCKTEST, $package->expire_at);
+			    $user->assignProduct($package->product, UserPackage::ALLOWED_OLYMPIAD_AND_MOCKTEST, $package->expire_at);
 			  }
 			}
 		}
