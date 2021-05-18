@@ -44,6 +44,18 @@ class PackageSeeder extends Seeder
            "start_at"  => $start_at,
            "status"  => 1
         ]);
+
+         Package::create([
+         "name" => "Mock Test",
+         "product" => $o->id,
+         "description" => "Only Mock Test",
+         "amount" => 100,
+         "type"  => Package::ONLY_MOCKTEST,
+         "expire_at"  => $expire_at,
+         "start_at"  => $start_at,
+         "status"  => 1
+        ]);
+
       }
 
       Package::create([
@@ -69,6 +81,7 @@ class PackageSeeder extends Seeder
          "start_at"  => $start_at,
          "status"  => 1
       ]);
+
     }
 
 }

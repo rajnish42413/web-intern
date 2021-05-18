@@ -1,10 +1,12 @@
 @extends('layouts.app-raw')
-
 @section('ecss')
+@php
+  $is_mocktest_only = request()->get('only_mocktest');
+@endphp
 <style type="text/css">
     #packages li{
-	list-style: none;
-	padding: 5px 15px;
+  list-style: none;
+  padding: 5px 15px;
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -22,11 +24,11 @@
 }
 
 #packages li label{
-	margin:0;
-	font-size: 1.3em;
-	font-weight: 500;
-	text-align: left;
-	color: #000;
+  margin:0;
+  font-size: 1.3em;
+  font-weight: 500;
+  text-align: left;
+  color: #000;
 }
 
 #packages li.primary label{
@@ -34,11 +36,11 @@
 }
 
 .ch-item{
-	border-bottom: solid 1px #b4b4b4;
-	padding: 20px 10px;
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
+  border-bottom: solid 1px #b4b4b4;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 .ch-item h3{
   font-size: 1.2em;
@@ -54,9 +56,9 @@
   color: #000;
 }
 .pkg-footer{
-	border: none;
-	background-color: #e2e2e2;
-	margin:0;
+  border: none;
+  background-color: #e2e2e2;
+  margin:0;
     right: 0;
     position: absolute;
     bottom: 0;
@@ -64,9 +66,9 @@
     left: 0;
 }
 .pkg-footer span{
-	font-size: 1.4em;
-	color: #000;
-	font-weight: bolder;
+  font-size: 1.4em;
+  color: #000;
+  font-weight: bolder;
 }
 #package-all, #package-single{
   display: none;
@@ -86,65 +88,69 @@
     </header>
     <div class="row">
         <div class="col-md-7" id="packages">
+            @if (!$is_mocktest_only)
             <div id="package-all">
-              <h3 class="heading-3 mb-3">
-                Packages
-            </h3>
-            @foreach ($packages as $package)
+                <h3 class="heading-3 mb-3">
+                    Packages
+                </h3>
+                @foreach ($packages as $package)
             @php
               $all_type = $package->type == 2 ? 'all-olympiad' :  'all-olympiad-mock';
               // $all_type = $package->type == 2 ? 'all-olympiad-'.$package->id :  'all-olympiad-mock-'$package->id;
-            @endphp 
-            <ul class="packages-list" >
-                <li class="primary">
-                    <label class="checkbox-container">
-                        {{ $package->name}}
-                        <input name="package_id" type="checkbox" value="{{ $package->id}}"
-                          class="multi_packages {{ $all_type }} package-{{ $package->id }}" onclick="handleAddPackage('multi')">
-                            <span class="checkmark">
-                            </span>
-                        </input>
-                    </label>
-                    <span class="heading-2 text-white">
-                        Rs {{ $package->amount}}
-                    </span>
-                </li>
-            </ul>
-            @endforeach
-          </div>
-           
-            <div id="package-single">
-               <h3 class="heading-3 mb-3 mt-5">
-                Single Olympiads
-            </h3>
-            @foreach ($olympiads as $olympiad)
-            <div class="card my-3 py-2">
-                <h3 class="heading-3 text-theme pl-3">
-                    {{ $olympiad->full_name }} ({{$olympiad->abbr}})
-                </h3>
-                <ul class="packages-list" >
-                    @foreach ($olympiad->packages as $package)
-                    @php
-                      $sn_type = $package->type == 0 ? 'olympiad' :  'olympiad-mock';
-                      $s_type = $package->type == 0 ? "olympiad-{$olympiad->id}" :  "olympiad-mock-{$olympiad->id}";
-                    @endphp 
-                    <li>
+            @endphp
+                <ul class="packages-list">
+                    <li class="primary">
                         <label class="checkbox-container">
                             {{ $package->name}}
-                             <input name="package_id" type="checkbox" value="{{ $package->id}}" class="single_packages {{ $s_type }} package-{{ $package->id }}" 
-                             onclick="handleAddPackage('single')">
-                                <span class="checkmark"></span>
-                             </input>
+                            <input class="multi_packages {{ $all_type }} package-{{ $package->id }}" name="package_id" onclick="handleAddPackage('multi')" type="checkbox" value="{{ $package->id}}">
+                                <span class="checkmark">
+                                </span>
+                            </input>
                         </label>
-                        <span class="heading-2">
+                        <span class="heading-2 text-white">
                             Rs {{ $package->amount}}
                         </span>
                     </li>
-                    @endforeach
                 </ul>
+                @endforeach
             </div>
-            @endforeach
-          </div>
+            @endif
+            <div id="package-single">
+                <h3 class="heading-3 mb-3 mt-5">
+                    Single Olympiads
+                </h3>
+                @foreach ($olympiads as $olympiad)
+                <div class="card my-3 py-2">
+                    <h3 class="heading-3 text-theme pl-3">
+                        {{ $olympiad->full_name }} ({{$olympiad->abbr}})
+                    </h3>
+                    <ul class="packages-list">
+                        @php
+                    $o_packages = $is_mocktest_only ? $olympiad->mockPackages : $olympiad->notMockPackages;
+                  @endphp
+
+                    @foreach ($o_packages as $package)
+                    @php
+                      $sn_type = $package->type == 0 ? 'olympiad' :  'olympiad-mock';
+                      $s_type = $package->type == 0 ? "olympiad-{$olympiad->id}" :  "olympiad-mock-{$olympiad->id}";
+                    @endphp
+                        <li>
+                            <label class="checkbox-container">
+                                {{ $package->name}}
+                                <input class="single_packages {{ $s_type }} package-{{ $package->id }}" name="package_id" onclick="handleAddPackage('single')" type="checkbox" value="{{ $package->id}}">
+                                    <span class="checkmark">
+                                    </span>
+                                </input>
+                            </label>
+                            <span class="heading-2">
+                                Rs {{ $package->amount}}
+                            </span>
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endforeach
+            </div>
         </div>
         <div class="col-md-5">
             {{-- //not selected any Item --}}
@@ -155,7 +161,6 @@
                 </p>
             </div>
             {{-- //not selected any Item --}}
-
             <div class="card p-3 bg-gray mb-5" id="checkout-packages-form">
                 <h5 class="text-muted my-3">
                     <span id="total-item">
@@ -163,22 +168,32 @@
                     </span>
                     Items Selected
                 </h5>
-                <div id="added-packages" class="card-body p-0"></div>
+                <div class="card-body p-0" id="added-packages">
+                </div>
                 <div class="card-footer">
-                  <div class="ch-item" id="total-amount">
-                      <h3 class="w-50">
-                          Payable
-                      </h3>
-                      <span class="w-50 heading-3" >Rs <span id="totalAmount"></span></span>
-                  </div>
-
-                 <form action="{{ route('order/create') }}" method="POST">
-                   @csrf
-                   <input type="hidden" name="amount" id="amount">
-                   <input type="hidden" name="package_ids" id="package_ids">
-                   <button class="btn btn-primary btn-block my-3" type="submit">Pay</button>
-                   <button class="btn btn-link btn-block my-3" type="button" onclick="resetAll()">Reset selection</button>
-                </form>
+                    <div class="ch-item" id="total-amount">
+                        <h3 class="w-50">
+                            Payable
+                        </h3>
+                        <span class="w-50 heading-3">
+                            Rs
+                            <span id="totalAmount">
+                            </span>
+                        </span>
+                    </div>
+                    <form action="{{ route('order/create') }}" method="POST">
+                        @csrf
+                        <input id="amount" name="amount" type="hidden">
+                            <input id="package_ids" name="package_ids" type="hidden">
+                                <button class="btn btn-primary btn-block my-3" type="submit">
+                                    Pay
+                                </button>
+                                <button class="btn btn-link btn-block my-3" onclick="resetAll()" type="button">
+                                    Reset selection
+                                </button>
+                            </input>
+                        </input>
+                    </form>
                 </div>
             </div>
         </div>
@@ -187,9 +202,9 @@
 @endsection
 
 @section('script')
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10">
+</script>
 <script type="text/javascript">
-
     window.onload = function() {
            $('#package-all').css('display','block');
            $('#package-single').css('display','block')     
@@ -205,15 +220,15 @@
 
     function handlePackagesType(type){
        if(type == "multi") {
-       	 $('#package-all').css('display','block');
+         $('#package-all').css('display','block');
          $('#package-single').css('display','none');
        }else{
-       	 $('#package-all').css('display','none');
+         $('#package-all').css('display','none');
          $('#package-single').css('display','block');
        }
 
        if(package_ids.length <= 0){
-       	 $('#package-all').css('display','block');
+         $('#package-all').css('display','block');
          $('#package-single').css('display','block');
        }
     }
@@ -246,15 +261,15 @@
        }
     }
 
- 	function formShow(){
+  function formShow(){
      if(package_ids.length > 0){
         $notFilledForm.addClass("d-none");
         $filledForm.removeClass("d-none");
       }else{
-      	$notFilledForm.removeClass("d-none");
-      	$filledForm.addClass("d-none");
+        $notFilledForm.removeClass("d-none");
+        $filledForm.addClass("d-none");
       }
- 	}
+  }
 
   function resetAll() {
     location.reload();
@@ -268,7 +283,7 @@
     )
   }
 
- 	function handleAddPackage(type){ 
+  function handleAddPackage(type){ 
       package_ids = $("input[name=package_id]:checked").map(function() {
         return $(this).val();
       }).get();
@@ -285,7 +300,7 @@
       renderAllPackges();
       formShow();
       handleSelectedPackages();
- 	}
+  }
 
   function renderAllPackges(){
     let content = "<ul>";

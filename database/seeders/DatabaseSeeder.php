@@ -16,5 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(StandardSeeder::class);
         $this->call(SubjectSeeder::class);
         $this->call(SyllabusSeeder::class);
+        $this->call(OlympiadSeeder::class);
+        $this->call(PackageSeeder::class);
     }
 }

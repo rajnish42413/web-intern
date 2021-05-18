@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Package;
 
 class Olympiad extends Model
 {
@@ -29,6 +30,17 @@ class Olympiad extends Model
     public function packages()
     {
         return $this->hasMany(Package::class, 'product');
+    }
+
+    public function notMockPackages()
+    {
+       return $this->packages()->where('type', '!=', Package::ONLY_MOCKTEST);
+    }
+
+
+    public function mockPackages()
+    {
+       return $this->packages()->where('type', Package::ONLY_MOCKTEST);
     }
 
 }

@@ -23,6 +23,8 @@ class Package extends Model
 	const OLYMPIAD_PLUS_MOCKTEST              = 1;
 	const ALL_OLYMPIAD                        = 2;
 	const ALL_OLYMPIAD_PLUS_MOCKTEST          = 3;
+	const ONLY_MOCKTEST                       = 4;
+
 
 	public function scopeActive($query)
     {

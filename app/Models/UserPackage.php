@@ -20,6 +20,7 @@ class UserPackage extends Model
 
 	const ALLOWED_ONLY_OLYMPIAD = 0;
 	const ALLOWED_OLYMPIAD_AND_MOCKTEST = 1;
+    const ONLY_MOCKTEST = 3;
 
     public function user()
     {
@@ -44,7 +45,7 @@ class UserPackage extends Model
 
     public function isAllowedMockTest()
     {
-     	return $this->type == static::ALLOWED_OLYMPIAD_AND_MOCKTEST;
+     	return ($this->type == static::ALLOWED_OLYMPIAD_AND_MOCKTEST || $this->type == static::ONLY_MOCKTEST);
     } 
 
 }

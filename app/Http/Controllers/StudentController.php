@@ -21,7 +21,9 @@ class StudentController extends Controller
      $data = [];
      $user = auth()->user();
      $user->packages;
-     $data["totalBuyed"] = $user->packages ? $user->packages()->where("status",1)->where("expire_at",">",Carbon::now())->count() : 0;
+     $data["totalBuyed"] = $user->packages ? $user->packages()->where("status",1)
+                                        ->where("type","!=", UserPackage::ONLY_MOCKTEST)
+                                         ->where("expire_at",">",Carbon::now())->count() : 0;
      $olympiads = Olympiad::active()->get();
 	   return view('user.dashboard',compact('data','olympiads'));
 	}

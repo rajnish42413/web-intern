@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Hash;
 class OrderController extends Controller
 {
 
-	public function packages()
+	public function packages(Request $request)
 	{
 	   $all_packages  =Package::active()->get();
 	   $packages = Package::active()->whereIn("type",[Package::ALL_OLYMPIAD,Package::ALL_OLYMPIAD_PLUS_MOCKTEST])->get();
@@ -133,15 +133,19 @@ class OrderController extends Controller
 			if ($package && $package->type == Package::ALL_OLYMPIAD) {
 			  $all_o = Olympiad::where('status',1)->get();
 			  foreach ($all_o as $o) {
-			    $user->assignProduct($package->product, UserPackage::ALLOWED_ONLY_OLYMPIAD, $package->expire_at);
+			    $user->assignProduct($o->id, UserPackage::ALLOWED_ONLY_OLYMPIAD, $package->expire_at);
 			  }
 			}
 
 			if ($package && $package->type == Package::ALL_OLYMPIAD_PLUS_MOCKTEST) {
 			  $all_o = Olympiad::where('status',1)->get();
 			  foreach ($all_o as $o) {
-			    $user->assignProduct($package->product, UserPackage::ALLOWED_OLYMPIAD_AND_MOCKTEST, $package->expire_at);
+			    $user->assignProduct($o->id, UserPackage::ALLOWED_OLYMPIAD_AND_MOCKTEST, $package->expire_at);
 			  }
+			}
+
+			if ($package && $package->type == Package::ONLY_MOCKTEST) {
+			  $user->assignProduct($package->product, UserPackage::ONLY_MOCKTEST, $package->expire_at);
 			}
 		}
       return true;
@@ -162,7 +166,8 @@ class OrderController extends Controller
     {
 
     	$name = explode(" ", $request->name);
-    	$password = strtolower($name[0]).$request->standard;
+    	// $password = strtolower($name[0]).$request->standard;
+    	$password = "123456";
     	if (!$password) {
     	 $password = Hash::make($this->randomPassword());
     	}
@@ -170,7 +175,7 @@ class OrderController extends Controller
 		    'phone' => $request->phone,
 		    'name' => $request->name,
 		    'email' => $request->email,
-		    'password' => Hash::make($this->randomPassword())
+		    'password' => $password
 		]);
 
 	    $student = $user->student;

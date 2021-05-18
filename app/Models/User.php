@@ -8,6 +8,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\Olympiad;
 use App\Models\Package;
+use Carbon\Carbon;
+
 
 class User extends Authenticatable
 {
@@ -113,9 +115,23 @@ class User extends Authenticatable
     public function isBuyedandNotExpired($olympiad_id)
     {
       $packages = $this->packages;
-      $up = $this->packages()->where('product_id',$olympiad_id)->first();
+      $up = $this->packages()->where('product_id',$olympiad_id)
+                              ->where('status', 1)
+                              ->where('type', '!=',3)
+                              ->first();
       if (!$up) return false;
-      return $up->isExpired();
+      return ($up->expire_at > Carbon::now() && $up->status == 1);
+    }
+
+    public function isBuyedandNotExpiredMock($olympiad_id)
+    {
+      $packages = $this->packages;
+      $up = $this->packages()->where('product_id',$olympiad_id)
+                              ->where('status', 1)
+                              ->whereIn('type', [3, 1])
+                              ->first();
+      if (!$up) return false;
+      return ($up->expire_at > Carbon::now() && $up->status == 1);
     }
 
     public function packages()

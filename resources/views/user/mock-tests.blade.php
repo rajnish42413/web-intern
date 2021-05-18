@@ -37,9 +37,13 @@
                @foreach ($olympiads as $olympiad)
                @php
                  $active = false;
+                 $active_mock = false;
                    if (auth()->user()->isBuyedandNotExpired($olympiad->id)){
-                    $active = true;
-                  }
+                      $active = true;
+                   }
+                   if (auth()->user()->isBuyedandNotExpiredMock($olympiad->id)){
+                      $active_mock = true;
+                   }
                @endphp
                   {{-- <div class="col-md-12">
                       <div class="list-exam @if (auth()->user()->isBuyedandNotExpired($olympiad->id)) active @endif">
@@ -47,7 +51,10 @@
                           <h3>{{ $olympiad->full_name }} ({{ $olympiad->abbr }})</h3>
                       </div>
                   </div> --}}
-                  <li class="list-item @if ($active) active @endif" buyed="@if ($active) true @else false @endif">
+                  <li class="list-item @if ($active) active @endif" 
+                    buyed-olympiad="@if ($active) true @else false @endif"
+                    buyed-mock="@if ($active_mock) true @else false @endif"
+                    >
                     {{ $olympiad->full_name }} ({{ $olympiad->abbr }})
                   </li>
                 @endforeach
@@ -77,12 +84,21 @@
                     </div>
                 </div>
             </div>
-            <div class="row d-none" id="buy-section">
+            <div class="row d-none" id="buy-o-section">
+                <div class="col-md-5">
+                    <div class=" bg-gray p-5">
+                     <h3 class="mb-4">Personalize your preparation by buying our <br />
+                        official Olympiad Package</h3>
+                     <a class="btn btn-primary" href="{{ url('packages') }}">Buy Olympiad</a>
+                   </div>
+                </div>
+            </div>
+            <div class="row d-none" id="buy-m-section">
                 <div class="col-md-5">
                     <div class=" bg-gray p-5">
                      <h3 class="mb-4">Personalize your preparation by buying our <br />
                         official Mock Test Package</h3>
-                     <a class="btn btn-primary" href="{{ url('packages') }}">Buy Now</a>
+                     <a class="btn btn-primary" href="{{ url('packages') }}">Buy Mock Test</a>
                    </div>
                 </div>
             </div>
@@ -95,7 +111,8 @@
  <script type="text/javascript">
      $subHeading = $("#mock-text-subheading");
      $mockTextContent = $("#mock-test-content");
-     $buyNow = $("#buy-section");
+     $buyNow = $("#buy-o-section");
+     $buyNowM = $("#buy-m-section");
 
       function setSubHeading(title) {
        $subHeading.html(title.trim());
@@ -106,13 +123,23 @@
       }
 
       $('.list-item').click(function(){
-         $isBuyed = $(this).attr('buyed');
+         $isBuyed = $(this).attr('buyed-olympiad');
+         $isBuyedM = $(this).attr('buyed-mock');
+
+        console.log($isBuyedM)
+
           if($isBuyed.trim() == 'false'){
              $mockTextContent.addClass("d-none");
              $buyNow.removeClass("d-none");
-          }else {
+             $buyNowM.addClass("d-none");
+          }else if ($isBuyedM.trim() == 'false') {
+            $mockTextContent.addClass("d-none");
+            $buyNow.addClass("d-none");
+            $buyNowM.removeClass("d-none");
+          }else{
              $mockTextContent.removeClass("d-none");
              $buyNow.addClass("d-none");
+             $buyNowM.addClass("d-none");
           }
           resetActive();
           $(this).addClass("active");
